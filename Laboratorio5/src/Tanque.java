@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Tanque.java
+ * Clase madre de los tanques. Por default implementa la cubica.
+ * Andrea Arguello 17801 Alejandro Tejada 17184
+ * 2/11/2017
  */
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class Tanque {
         this.id=id;
         this.alto=alto;
         valvulas = new Valvula[10];
+        cantAgua=0; //inicia el tanque vacio
     }
     
     /**
@@ -48,52 +50,84 @@ public class Tanque {
         return dimensiones;
     }
     
+    /**
+     * Coloca la capacidad (volumen)
+     */
     public void setCapacidad()
     {
         this.capacidad=alto*alto*alto;
     }
     
+    /**
+     * 
+     * @return capacidad (volumen) del tanque
+     */
     public double getCapacidad()
     {
         return capacidad;
     }
     
-    public void setCantAgua()
-    {
-        this.cantAgua=capacidad;
-    }
-    
+    /**
+     * 
+     * @return cantidad actual de agua
+     */
     public double getCantAgua()
     {
         return cantAgua;
     }
     
+    /**
+     * Calcula el porcentaje de agua restante con respecto a la capacidad
+     */
     public void setPorcentaje()
     {
         this.porcentajeRestante=(cantAgua*100)/capacidad;
     }
     
+    /**
+     * 
+     * @return porcentaje 
+     */
     public double getPorcentajeRestante()
     {
         return porcentajeRestante;
     }
     
+    /**
+     * 
+     * @return forma del tanque
+     */
     public String getForma()
     {
         return forma;
     }
     
+    /**
+     * 
+     * @return numero de identificacion del tanque
+     */
     public long getID()
     {
         return id;
     }
     
+    /**
+     * 
+     * @param numero numero de valvula (del uno al 10)
+     * @param municipio nombre del municipio
+     * @param habitantes numero de habitantes
+     */
     public void ingresarValvula(int numero, String municipio, int habitantes)
     {
         Valvula nuevaValvula=new Valvula(municipio, habitantes, numero);
         valvulas[numero-1]= nuevaValvula;
     }
     
+    /**
+     * Abre una valvula del tanque
+     * @param numero numero de valvula
+     * @param fecha fecha de apertura
+     */
     public void abrirValvula(int numero, String fecha)
     {
         for(Valvula valve: valvulas)
@@ -106,6 +140,11 @@ public class Tanque {
         }
     }
     
+    /**
+     * Cierra una valvula del tanque
+     * @param numero numero de valvula
+     * @param fecha fecha de cierre
+     */
     public void cerrarValvula(int numero, String fecha)
     {
         for(Valvula valve: valvulas)
@@ -117,10 +156,22 @@ public class Tanque {
         }
     }
     
+    /**
+     * Llena el tanque a su capacidad maxima
+     */
     public void llenarTanque()
     {
         cantAgua=capacidad;
     }
     
+    /**
+     * 
+     * @return String de informacion relevante del tanque
+     */
+    @Override
+    public String toString()
+    {
+        return "\nID:"+ id+ "\nForma:" + forma + "\nDimensiones:" + dimensiones + "\nCapacidad:" + capacidad + "\nAgua Restante:" + cantAgua;
+    }
     
 }

@@ -1,23 +1,33 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * NivelBajoException.java
+ * Excepcion para los porcentajes.
+ * Andrea Arguello 17801 Alejandro Tejada 17184
+ * 2/11/2017
  */
 
 /**
  *
- * @author Andrea
+ * @author Usuario
  */
 public class NivelBajoException extends Exception {
-    
+    //Atributos
     private double porcentaje;
     
+    /**
+     * Constructor
+     * @param mensaje Mensaje de la excepcion
+     * @param porcentaje Porcentaje de la alerta
+     */
     public NivelBajoException(String mensaje, double porcentaje)
     {
         super(mensaje);
         this.porcentaje=porcentaje;
     }
     
+    /**
+     * 
+     * @return porcentaje
+     */
     public double getPorcentaje()
     {
         return porcentaje;

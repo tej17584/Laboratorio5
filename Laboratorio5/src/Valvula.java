@@ -1,14 +1,15 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Valvula.java
+ * Clase de las valvulas
+ * Andrea Arguello 17801 Alejandro Tejada 17184
+ * 2/11/2017
  */
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Andrea
+ * @author Usuario
  */
 public class Valvula {
     //Atributos

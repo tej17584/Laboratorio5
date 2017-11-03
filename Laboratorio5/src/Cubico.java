@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Cubico.java
+ * Clase hija para tanques cubicos.
+ * Andrea Arguello 17801 Alejandro Tejada 17184
+ * 3/11/2017
  */
 
 /**
@@ -9,9 +10,15 @@
  * @author Usuario
  */
 public class Cubico extends Tanque{
+    /**
+     * Constructor
+     * @param forma forma del tanque (cubico)
+     * @param id numero de identificacion
+     * @param alto altura
+     */
     public Cubico(String forma, long id, double alto)
     {
-        super("CUBICO", id, alto);
+        super(forma, id, alto);
     }
     
 }
