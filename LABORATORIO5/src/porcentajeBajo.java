@@ -1,15 +1,17 @@
 /*
  * porcentajeBajo.java
  * Implementa la excepcion
- * Andrea Arguello 17801 Alejandro Tejada 17184
+ * Andrea Arguello 17801 Alejandro Tejada 17584
  * 2/11/2017
  */
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Usuario
  */
+
 public class porcentajeBajo {
+    //Atributos
     public static final double noAbrir=25, cerrarTodo=10;
     
     /**
@@ -41,6 +43,9 @@ public class porcentajeBajo {
             excepcion = new NivelBajoException(alerta,porcentaje);
             throw excepcion;
         }
+        
+        
+        
     }
     
 }

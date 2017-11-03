@@ -1,7 +1,7 @@
 /*
  * Valvula.java
  * Clase de las valvulas
- * Andrea Arguello 17801 Alejandro Tejada 17184
+ * Andrea Arguello 17801 Alejandro Tejada 17584
  * 2/11/2017
  */
 

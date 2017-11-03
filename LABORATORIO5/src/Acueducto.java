@@ -1,11 +1,12 @@
 /*
  * Acueducto.java
  * Realiza las acciones.
- * Andrea Arguello 17801 Alejandro Tejada 17184
+ * Andrea Arguello 17801 Alejandro Tejada 17584
  * 3/11/2017
  */
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -219,6 +220,19 @@ public class Acueducto {
         }
         return p;
     }
+    
+    /**
+    public void Excepcion(long id)
+    {
+        try{
+            porcentajeBajo.porcentajeBajo(getPorcentaje(id));
+        }
+        catch(NivelBajoException e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Alerta", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    * /
     
     /**
      * Abre la valvula
