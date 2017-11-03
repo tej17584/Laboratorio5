@@ -1,7 +1,7 @@
 /*
  * Ortogonal.java
  * Clase hija para tanques cilindricos
- * Andrea Arguello 17801 Alejandro Tejada 17184
+ * Andrea Arguello 17801 Alejandro Tejada 17584
  * 3/11/2017
  */
 
