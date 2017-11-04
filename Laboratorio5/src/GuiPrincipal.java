@@ -12,12 +12,15 @@ import java.util.ArrayList;
  * @author Jose Tejada
  */
 public class GuiPrincipal extends javax.swing.JFrame {
-
+    private Acueducto acueducto;
+    
     /**
      * Creates new form GuiPrincipal
      */
     public GuiPrincipal() {
         initComponents();
+        acueducto=new Acueducto();
+        
     }
 
     /**
@@ -501,9 +504,10 @@ public class GuiPrincipal extends javax.swing.JFrame {
         ArrayList<String> municipios=new ArrayList<String>();
         ArrayList<Integer> habitantes=new ArrayList<Integer>();
         
+        
         if(jComboBoxTipoTanque.getSelectedItem().equals("Cilindrico"))
         {
-            
+            //acueducto.agregarCilindrico("Cilindrico",)
         }
         else if(jComboBoxTipoTanque.getSelectedItem().equals("Cubico"))
         {
