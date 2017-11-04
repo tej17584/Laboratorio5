@@ -22,6 +22,8 @@ public class NivelBajoException extends Exception {
     {
         super(mensaje);
         this.porcentaje=porcentaje;
+        int s=9;
+        String a=String.valueOf(s);
     }
     
     /**

@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,6 +12,7 @@
  * @author Jose Tejada
  */
 public class GuiPrincipal extends javax.swing.JFrame {
+    Acueducto acueducto= new Acueducto();
 
     /**
      * Creates new form GuiPrincipal
@@ -153,6 +157,12 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jButtonAguaDisponibleRegion = new javax.swing.JButton();
         jButtonVerTanquesRegistrados = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+
+        jFrameNuevoTanque.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                jFrameNuevoTanqueWindowOpened(evt);
+            }
+        });
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -426,7 +436,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jFrameNuevoTanqueLayout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 51, Short.MAX_VALUE))
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -741,75 +751,85 @@ public class GuiPrincipal extends javax.swing.JFrame {
                     .addComponent(jLabel47)
                     .addComponent(jLabel48))
                 .addGap(9, 9, 9)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel30)
                     .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula1)
-                    .addComponent(jButtonCerrarValvula1)
-                    .addComponent(jTextFieldMunicipioMostrar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonAbrirValvula1)
+                        .addComponent(jButtonCerrarValvula1)
+                        .addComponent(jTextFieldMunicipioMostrar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel31)
                     .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula2)
-                    .addComponent(jButtonCerrarValvula2)
-                    .addComponent(jTextFieldMunicipioMostrar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonAbrirValvula2)
+                        .addComponent(jButtonCerrarValvula2)
+                        .addComponent(jTextFieldMunicipioMostrar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldMunicipioMostrar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel33)
                     .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula3)
-                    .addComponent(jButtonCerrarValvula3))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipioMostrar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrirValvula3)
+                        .addComponent(jButtonCerrarValvula3)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldMunicipioMostrar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel35)
                     .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula4)
-                    .addComponent(jButtonCerrarValvula4))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipioMostrar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrirValvula4)
+                        .addComponent(jButtonCerrarValvula4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldMunicipioMostrar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel37)
                     .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula5)
-                    .addComponent(jButtonCerrarValvula5))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipioMostrar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrirValvula5)
+                        .addComponent(jButtonCerrarValvula5)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldMunicipioMostrar6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39)
                     .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula6)
-                    .addComponent(jButtonCerrarValvula6))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipioMostrar6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrirValvula6)
+                        .addComponent(jButtonCerrarValvula6)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldMunicipioMostrar7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel40)
                     .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula7)
-                    .addComponent(jButtonCerrarValvula7))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipioMostrar7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrirValvula7)
+                        .addComponent(jButtonCerrarValvula7)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldMunicipioMostrar8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel41)
                     .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula8)
-                    .addComponent(jButtonCerrarValvula8))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipioMostrar8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrirValvula8)
+                        .addComponent(jButtonCerrarValvula8)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldMunicipioMostrar9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel49)
                     .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula9)
-                    .addComponent(jButtonCerrarValvula9))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipioMostrar9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrirValvula9)
+                        .addComponent(jButtonCerrarValvula9)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldMunicipioMostrar10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel51)
                     .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAbrirValvula10)
-                    .addComponent(jButtonCerrarValvula10))
+                    .addGroup(jFrameVerValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipioMostrar10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrirValvula10)
+                        .addComponent(jButtonCerrarValvula10)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonSalirManejoValvulas)
                 .addGap(11, 11, 11))
@@ -1001,18 +1021,82 @@ public class GuiPrincipal extends javax.swing.JFrame {
         a= (String) jComboBoxTipoTanque.getSelectedItem();//recogemos el dato que se seleccionó
         if (a.toUpperCase().equals("CILINDRICO")) {
             jTextFieldLargoTanque.setEditable(false);
+            jTextFieldAnchoRadioTanque.setEditable(true);
+            jTextFieldAltoTanque.setEditable(true);
         }
-        else if ((a.toUpperCase().equals("CUBICO"))||(a.toUpperCase().equals("ORTOGONAL"))) {
+        else if ((a.toUpperCase().equals("ORTOGONAL"))) {
             jTextFieldLargoTanque.setEditable(true);
             jTextFieldAnchoRadioTanque.setEditable(true);
             jTextFieldAltoTanque.setEditable(true);
         }
+        else if (a.toUpperCase().equals("CUBICO")) {
+            jTextFieldLargoTanque.setEditable(false);
+            jTextFieldAltoTanque.setEditable(false);
+            jTextFieldAnchoRadioTanque.setEditable(true);
+        }
+        borrarCamposTanque();
     }//GEN-LAST:event_jComboBoxTipoTanqueActionPerformed
 
+    public void borrarCamposTanque(){
+        jTextFieldLargoTanque.setText("");
+        jTextFieldAnchoRadioTanque.setText("");
+        jTextFieldAltoTanque.setText("");
+        jTextFieldIdTanque.setText("");
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        String tipoTanqueEscogido=(String) jComboBoxTipoTanque.getSelectedItem();
+        String idTanque=jTextFieldIdTanque.getText();
+        double radioTanque=0;
+        double LargoTanque=0;
+        double AltoTanque=0;
+        
+        switch (tipoTanqueEscogido.toUpperCase()) {
+            case "CILINDRICO":
+                try {
+                    radioTanque=Double.parseDouble(jTextFieldAnchoRadioTanque.getText());
+                    AltoTanque=Double.parseDouble(jTextFieldAltoTanque.getText());
+                    
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null, "Un valor o valores ingresados en el campo de Ancho/Radio o Alto no es numero.");
+                    radioTanque=0;
+                    LargoTanque=0;
+                    AltoTanque=0;
+                }   break;
+            case "CUBICO":
+                try {
+                    radioTanque=Double.parseDouble(jTextFieldAnchoRadioTanque.getText());
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null, "El valor ingresado en el campo de Ancho/Radio no es un numero.");
+                    radioTanque=0;
+                    LargoTanque=0;
+                    AltoTanque=0;
+                }   break;
+            case "ORTOGONAL":
+                try {
+                    radioTanque=Double.parseDouble(jTextFieldAnchoRadioTanque.getText());
+                    AltoTanque=Double.parseDouble(jTextFieldAltoTanque.getText());
+                    LargoTanque=Double.parseDouble(jTextFieldLargoTanque.getText());
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null, "Un valor o valores ingresados en el campo de Ancho/Radio, Alto o Largo no es numero.");
+                    radioTanque=0;
+                    LargoTanque=0;
+                    AltoTanque=0;
+                }   break;
+            default:
+                break;
+        }
+        
+    
+        
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jFrameNuevoTanqueWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_jFrameNuevoTanqueWindowOpened
+        // TODO add your handling code here:
+        borrarCamposTanque();
+    }//GEN-LAST:event_jFrameNuevoTanqueWindowOpened
 
     /**
      * @param args the command line arguments
