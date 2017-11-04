@@ -5,7 +5,7 @@
  * 3/11/2017
  */
 
-
+import javax.swing.JOptionPane;
 import java.util.ArrayList;
 /**
  *
@@ -83,6 +83,70 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jFrameValvulas = new javax.swing.JFrame();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jComboBoxIDTanque = new javax.swing.JComboBox<>();
+        jLabel26 = new javax.swing.JLabel();
+        jTextFieldMetrosTanque = new javax.swing.JTextField();
+        jProgressBarAguaTanque = new javax.swing.JProgressBar();
+        jButtonLlenarTanque = new javax.swing.JButton();
+        jTextFieldMunicipio1 = new javax.swing.JTextField();
+        jTextFieldMunicipio2 = new javax.swing.JTextField();
+        jTextFieldMunicipio3 = new javax.swing.JTextField();
+        jTextFieldMunicipio4 = new javax.swing.JTextField();
+        jTextFieldMunicipio5 = new javax.swing.JTextField();
+        jTextFieldMunicipio6 = new javax.swing.JTextField();
+        jTextFieldMunicipio7 = new javax.swing.JTextField();
+        jTextFieldMunicipio8 = new javax.swing.JTextField();
+        jTextFieldMunicipio9 = new javax.swing.JTextField();
+        jTextFieldMunicipio10 = new javax.swing.JTextField();
+        jButtonAbrir1 = new javax.swing.JButton();
+        jButtonAbrir2 = new javax.swing.JButton();
+        jButtonAbrir3 = new javax.swing.JButton();
+        jButtonAbrir4 = new javax.swing.JButton();
+        jButtonAbrir5 = new javax.swing.JButton();
+        jButtonAbrir6 = new javax.swing.JButton();
+        jButtonAbrir7 = new javax.swing.JButton();
+        jButtonAbrir8 = new javax.swing.JButton();
+        jButtonAbrir9 = new javax.swing.JButton();
+        jButtonAbrir10 = new javax.swing.JButton();
+        jButtonCerrar1 = new javax.swing.JButton();
+        jButtonCerrar2 = new javax.swing.JButton();
+        jButtonCerrar3 = new javax.swing.JButton();
+        jButtonCerrar4 = new javax.swing.JButton();
+        jButtonCerrar5 = new javax.swing.JButton();
+        jButtonCerrar6 = new javax.swing.JButton();
+        jButtonCerrar7 = new javax.swing.JButton();
+        jButtonCerrar8 = new javax.swing.JButton();
+        jButtonCerrar9 = new javax.swing.JButton();
+        jButtonCerrar10 = new javax.swing.JButton();
+        jLabelCerrado1 = new javax.swing.JLabel();
+        jLabelCerrado2 = new javax.swing.JLabel();
+        jLabelCerrado3 = new javax.swing.JLabel();
+        jLabelCerrado4 = new javax.swing.JLabel();
+        jLabelCerrado5 = new javax.swing.JLabel();
+        jLabelCerrado6 = new javax.swing.JLabel();
+        jLabelCerrado7 = new javax.swing.JLabel();
+        jLabelCerrado8 = new javax.swing.JLabel();
+        jLabelCerrado9 = new javax.swing.JLabel();
+        jLabelCerrado10 = new javax.swing.JLabel();
+        jLabelAbierto1 = new javax.swing.JLabel();
+        jLabelAbierto2 = new javax.swing.JLabel();
+        jLabelAbierto3 = new javax.swing.JLabel();
+        jLabelAbierto4 = new javax.swing.JLabel();
+        jLabelAbierto5 = new javax.swing.JLabel();
+        jLabelAbierto6 = new javax.swing.JLabel();
+        jLabelAbierto7 = new javax.swing.JLabel();
+        jLabelAbierto8 = new javax.swing.JLabel();
+        jLabelAbierto9 = new javax.swing.JLabel();
+        jLabelAbierto10 = new javax.swing.JLabel();
+        jButtonSalirValvulas = new javax.swing.JButton();
+        jFrameTanques = new javax.swing.JFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaTanques = new javax.swing.JTextArea();
+        jLabel27 = new javax.swing.JLabel();
+        jButtonSalirTanques = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButtonSalirPrograma = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -377,6 +441,410 @@ public class GuiPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jFrameValvulas.setTitle("Valvulas");
+
+        jLabel24.setText("Ingrese el Tanque");
+
+        jComboBoxIDTanque.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel26.setText("Cantidad de agua (m^3)");
+
+        jTextFieldMetrosTanque.setEditable(false);
+
+        jButtonLlenarTanque.setText("Llenar");
+
+        jTextFieldMunicipio1.setEditable(false);
+
+        jTextFieldMunicipio2.setEditable(false);
+
+        jTextFieldMunicipio3.setEditable(false);
+
+        jTextFieldMunicipio4.setEditable(false);
+
+        jTextFieldMunicipio5.setEditable(false);
+
+        jTextFieldMunicipio6.setEditable(false);
+
+        jTextFieldMunicipio7.setEditable(false);
+
+        jTextFieldMunicipio8.setEditable(false);
+
+        jTextFieldMunicipio9.setEditable(false);
+
+        jTextFieldMunicipio10.setEditable(false);
+
+        jButtonAbrir1.setText("Abrir");
+
+        jButtonAbrir2.setText("Abrir");
+
+        jButtonAbrir3.setText("Abrir");
+
+        jButtonAbrir4.setText("Abrir");
+
+        jButtonAbrir5.setText("Abrir");
+
+        jButtonAbrir6.setText("Abrir");
+
+        jButtonAbrir7.setText("Abrir");
+
+        jButtonAbrir8.setText("Abrir");
+
+        jButtonAbrir9.setText("Abrir");
+
+        jButtonAbrir10.setText("Abrir");
+
+        jButtonCerrar1.setText("Cerrar");
+
+        jButtonCerrar2.setText("Cerrar");
+
+        jButtonCerrar3.setText("Cerrar");
+
+        jButtonCerrar4.setText("Cerrar");
+
+        jButtonCerrar5.setText("Cerrar");
+
+        jButtonCerrar6.setText("Cerrar");
+
+        jButtonCerrar7.setText("Cerrar");
+
+        jButtonCerrar8.setText("Cerrar");
+
+        jButtonCerrar9.setText("Cerrar");
+
+        jButtonCerrar10.setText("Cerrar");
+
+        jLabelCerrado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelCerrado2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelCerrado3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelCerrado4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelCerrado5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelCerrado6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelCerrado7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelCerrado8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelCerrado9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelCerrado10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
+
+        jLabelAbierto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        jLabelAbierto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        jLabelAbierto3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        jLabelAbierto4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        jLabelAbierto5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        jLabelAbierto6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        jLabelAbierto7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        jLabelAbierto8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        jLabelAbierto9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        jLabelAbierto10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBoxIDTanque, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jLabel26)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextFieldMetrosTanque, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jProgressBarAguaTanque, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonLlenarTanque))))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(jLabel24)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addGap(0, 23, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado1))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado2))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado3))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado4))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado5))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado6))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado7))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado8))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado9))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabelAbierto10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelCerrado10)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel4Layout.createSequentialGroup()
+                                    .addComponent(jTextFieldMunicipio10, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAbrir10)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButtonCerrar10))
+                                .addGroup(jPanel4Layout.createSequentialGroup()
+                                    .addComponent(jTextFieldMunicipio9, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAbrir9)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButtonCerrar9))
+                                .addGroup(jPanel4Layout.createSequentialGroup()
+                                    .addComponent(jTextFieldMunicipio8, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAbrir8)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButtonCerrar8))
+                                .addGroup(jPanel4Layout.createSequentialGroup()
+                                    .addComponent(jTextFieldMunicipio7, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAbrir7)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButtonCerrar7))
+                                .addGroup(jPanel4Layout.createSequentialGroup()
+                                    .addComponent(jTextFieldMunicipio6, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAbrir6)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButtonCerrar6))
+                                .addGroup(jPanel4Layout.createSequentialGroup()
+                                    .addComponent(jTextFieldMunicipio5, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAbrir5)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButtonCerrar5))
+                                .addGroup(jPanel4Layout.createSequentialGroup()
+                                    .addComponent(jTextFieldMunicipio4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAbrir4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButtonCerrar4))
+                                .addGroup(jPanel4Layout.createSequentialGroup()
+                                    .addComponent(jTextFieldMunicipio1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAbrir1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButtonCerrar1)))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jTextFieldMunicipio2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButtonAbrir2))
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jTextFieldMunicipio3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButtonAbrir3)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonCerrar3)
+                                    .addComponent(jButtonCerrar2))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jLabel24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBoxIDTanque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jTextFieldMetrosTanque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonLlenarTanque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jProgressBarAguaTanque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir1)
+                        .addComponent(jButtonCerrar1)
+                        .addComponent(jLabelCerrado1))
+                    .addComponent(jLabelAbierto1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir2)
+                        .addComponent(jButtonCerrar2))
+                    .addComponent(jLabelCerrado2)
+                    .addComponent(jLabelAbierto2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir3)
+                        .addComponent(jButtonCerrar3))
+                    .addComponent(jLabelCerrado3)
+                    .addComponent(jLabelAbierto3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir4)
+                        .addComponent(jButtonCerrar4))
+                    .addComponent(jLabelCerrado4)
+                    .addComponent(jLabelAbierto4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir5)
+                        .addComponent(jButtonCerrar5))
+                    .addComponent(jLabelCerrado5)
+                    .addComponent(jLabelAbierto5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir6)
+                        .addComponent(jButtonCerrar6))
+                    .addComponent(jLabelCerrado6)
+                    .addComponent(jLabelAbierto6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir7)
+                        .addComponent(jButtonCerrar7))
+                    .addComponent(jLabelCerrado7)
+                    .addComponent(jLabelAbierto7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir8)
+                        .addComponent(jButtonCerrar8))
+                    .addComponent(jLabelCerrado8)
+                    .addComponent(jLabelAbierto8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir9)
+                        .addComponent(jButtonCerrar9))
+                    .addComponent(jLabelCerrado9)
+                    .addComponent(jLabelAbierto9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldMunicipio10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAbrir10)
+                        .addComponent(jButtonCerrar10))
+                    .addComponent(jLabelCerrado10)
+                    .addComponent(jLabelAbierto10))
+                .addGap(0, 12, Short.MAX_VALUE))
+        );
+
+        jButtonSalirValvulas.setText("Salir");
+
+        javax.swing.GroupLayout jFrameValvulasLayout = new javax.swing.GroupLayout(jFrameValvulas.getContentPane());
+        jFrameValvulas.getContentPane().setLayout(jFrameValvulasLayout);
+        jFrameValvulasLayout.setHorizontalGroup(
+            jFrameValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameValvulasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonSalirValvulas)
+                .addGap(24, 24, 24))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrameValvulasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jFrameValvulasLayout.setVerticalGroup(
+            jFrameValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameValvulasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonSalirValvulas)
+                .addContainerGap())
+        );
+
+        jTextAreaTanques.setColumns(20);
+        jTextAreaTanques.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaTanques);
+
+        jLabel27.setText("Tanques de la region");
+
+        jButtonSalirTanques.setText("Salir");
+
+        javax.swing.GroupLayout jFrameTanquesLayout = new javax.swing.GroupLayout(jFrameTanques.getContentPane());
+        jFrameTanques.getContentPane().setLayout(jFrameTanquesLayout);
+        jFrameTanquesLayout.setHorizontalGroup(
+            jFrameTanquesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameTanquesLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel27)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jFrameTanquesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jFrameTanquesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonSalirTanques)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jFrameTanquesLayout.setVerticalGroup(
+            jFrameTanquesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrameTanquesLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonSalirTanques)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Arguello y Tejada Inc.");
 
@@ -403,12 +871,27 @@ public class GuiPrincipal extends javax.swing.JFrame {
 
         jButtonVerValvulas.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jButtonVerValvulas.setText("Ver Válvulas");
+        jButtonVerValvulas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVerValvulasActionPerformed(evt);
+            }
+        });
 
         jButtonValvulasAbiertasCilindricos.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jButtonValvulasAbiertasCilindricos.setText("Válvulas Abiertas Cilíndricos");
+        jButtonValvulasAbiertasCilindricos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonValvulasAbiertasCilindricosActionPerformed(evt);
+            }
+        });
 
         jButtonAguaDisponibleRegion.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jButtonAguaDisponibleRegion.setText("Agua Disponible Region");
+        jButtonAguaDisponibleRegion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAguaDisponibleRegionActionPerformed(evt);
+            }
+        });
 
         jButtonVerTanquesRegistrados.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jButtonVerTanquesRegistrados.setText("Ver Tanques Registrados");
@@ -519,6 +1002,22 @@ public class GuiPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButtonVerValvulasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerValvulasActionPerformed
+        // TODO add your handling code here:
+        jFrameValvulas.pack();
+        jFrameValvulas.setVisible(true);
+    }//GEN-LAST:event_jButtonVerValvulasActionPerformed
+
+    private void jButtonAguaDisponibleRegionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAguaDisponibleRegionActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"Agua disponible para la region:\n" + String.valueOf(acueducto.getAguaRegion()) + "m^3");
+    }//GEN-LAST:event_jButtonAguaDisponibleRegionActionPerformed
+
+    private void jButtonValvulasAbiertasCilindricosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValvulasAbiertasCilindricosActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Cantidad de valvulas de tanques cilindricos abiertas:\n"+String.valueOf(acueducto.valvulasAbiertasCilindro()));
+    }//GEN-LAST:event_jButtonValvulasAbiertasCilindricosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -557,14 +1056,40 @@ public class GuiPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAbrir1;
+    private javax.swing.JButton jButtonAbrir10;
+    private javax.swing.JButton jButtonAbrir2;
+    private javax.swing.JButton jButtonAbrir3;
+    private javax.swing.JButton jButtonAbrir4;
+    private javax.swing.JButton jButtonAbrir5;
+    private javax.swing.JButton jButtonAbrir6;
+    private javax.swing.JButton jButtonAbrir7;
+    private javax.swing.JButton jButtonAbrir8;
+    private javax.swing.JButton jButtonAbrir9;
     private javax.swing.JButton jButtonAgregarTanque;
     private javax.swing.JButton jButtonAguaDisponibleRegion;
+    private javax.swing.JButton jButtonCerrar1;
+    private javax.swing.JButton jButtonCerrar10;
+    private javax.swing.JButton jButtonCerrar2;
+    private javax.swing.JButton jButtonCerrar3;
+    private javax.swing.JButton jButtonCerrar4;
+    private javax.swing.JButton jButtonCerrar5;
+    private javax.swing.JButton jButtonCerrar6;
+    private javax.swing.JButton jButtonCerrar7;
+    private javax.swing.JButton jButtonCerrar8;
+    private javax.swing.JButton jButtonCerrar9;
+    private javax.swing.JButton jButtonLlenarTanque;
     private javax.swing.JButton jButtonSalirPrograma;
+    private javax.swing.JButton jButtonSalirTanques;
+    private javax.swing.JButton jButtonSalirValvulas;
     private javax.swing.JButton jButtonValvulasAbiertasCilindricos;
     private javax.swing.JButton jButtonVerTanquesRegistrados;
     private javax.swing.JButton jButtonVerValvulas;
+    private javax.swing.JComboBox<String> jComboBoxIDTanque;
     private javax.swing.JComboBox<String> jComboBoxTipoTanque;
     private javax.swing.JFrame jFrameNuevoTanque;
+    private javax.swing.JFrame jFrameTanques;
+    private javax.swing.JFrame jFrameValvulas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -581,7 +1106,10 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -589,9 +1117,33 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelAbierto1;
+    private javax.swing.JLabel jLabelAbierto10;
+    private javax.swing.JLabel jLabelAbierto2;
+    private javax.swing.JLabel jLabelAbierto3;
+    private javax.swing.JLabel jLabelAbierto4;
+    private javax.swing.JLabel jLabelAbierto5;
+    private javax.swing.JLabel jLabelAbierto6;
+    private javax.swing.JLabel jLabelAbierto7;
+    private javax.swing.JLabel jLabelAbierto8;
+    private javax.swing.JLabel jLabelAbierto9;
+    private javax.swing.JLabel jLabelCerrado1;
+    private javax.swing.JLabel jLabelCerrado10;
+    private javax.swing.JLabel jLabelCerrado2;
+    private javax.swing.JLabel jLabelCerrado3;
+    private javax.swing.JLabel jLabelCerrado4;
+    private javax.swing.JLabel jLabelCerrado5;
+    private javax.swing.JLabel jLabelCerrado6;
+    private javax.swing.JLabel jLabelCerrado7;
+    private javax.swing.JLabel jLabelCerrado8;
+    private javax.swing.JLabel jLabelCerrado9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JProgressBar jProgressBarAguaTanque;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextAreaTanques;
     private javax.swing.JTextField jTextFieldAltoTanque;
     private javax.swing.JTextField jTextFieldAnchoRadioTanque;
     private javax.swing.JTextField jTextFieldHabitantesValvula1;
@@ -606,6 +1158,17 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldHabitantesValvula9;
     private javax.swing.JTextField jTextFieldIdTanque;
     private javax.swing.JTextField jTextFieldLargoTanque;
+    private javax.swing.JTextField jTextFieldMetrosTanque;
+    private javax.swing.JTextField jTextFieldMunicipio1;
+    private javax.swing.JTextField jTextFieldMunicipio10;
+    private javax.swing.JTextField jTextFieldMunicipio2;
+    private javax.swing.JTextField jTextFieldMunicipio3;
+    private javax.swing.JTextField jTextFieldMunicipio4;
+    private javax.swing.JTextField jTextFieldMunicipio5;
+    private javax.swing.JTextField jTextFieldMunicipio6;
+    private javax.swing.JTextField jTextFieldMunicipio7;
+    private javax.swing.JTextField jTextFieldMunicipio8;
+    private javax.swing.JTextField jTextFieldMunicipio9;
     private javax.swing.JTextField jTextFieldMunicipioValvula1;
     private javax.swing.JTextField jTextFieldMunicipioValvula10;
     private javax.swing.JTextField jTextFieldMunicipioValvula2;

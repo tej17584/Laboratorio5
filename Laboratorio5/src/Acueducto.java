@@ -17,6 +17,7 @@ public class Acueducto {
     private Tanque[] tanques;
     private int valvCilindros;
     private Tanque temporal;
+    private double cantAgua;
     
     /**
      *Constructor
@@ -52,6 +53,23 @@ public class Acueducto {
             }
             break;
         }
+    }
+    
+    /**
+     * Calcula el agua disponible para la region completa
+     * @return cantidad de agua en m^3
+     */
+    public double getAguaRegion()
+    {   cantAgua=0;
+        for(Tanque tanque:tanques)
+        {
+            if(tanque!=null)
+            {
+                cantAgua+=tanque.getCantAgua();
+                return cantAgua;
+            }
+        }
+        return cantAgua;
     }
     
     /**
