@@ -14,17 +14,16 @@ import javax.swing.JOptionPane;
  */
 public class Acueducto {
     //Atributos
-    private Tanque[] tanques;
-    private int valvCilindros;
-    private Tanque temporal;
-    private double cantAgua;
+    public ArrayList<Tanque> tanques;
+    public int valvCilindros;
+    public  double cantAgua;
     
     /**
      *Constructor
      */
     public Acueducto()
     {
-        tanques=new Tanque[10];
+        tanques=new ArrayList<>();
         valvCilindros=0;
     }
     
@@ -36,23 +35,20 @@ public class Acueducto {
      * @param municipios municipios de las valvulas
      * @param habitantes cantidad de habitantes de los municipios
      */
-    public void agregarCubico(String forma, long id, double alto, ArrayList<String> municipios, ArrayList<Integer> habitantes)
+    public void agregarCubico(String forma, String id, double alto, ArrayList<String> municipios, ArrayList<Integer> habitantes)
     {
-        Cubico nuevoCubico= new Cubico(forma,id,alto);
-        for(int i=0; i<10; i++)
+        Tanque temporal=null;
+        temporal= new Cubico(forma,id,alto);
+        for(int i=0; i<municipios.size(); i++)
         {
-            nuevoCubico.ingresarValvula(i+1, municipios.get(i), habitantes.get(i));
+            temporal.ingresarValvula(i+1, municipios.get(i), habitantes.get(i));
         }
+        temporal.setDimensiones();
+        temporal.setCapacidad();
+        temporal.llenarTanque();
         
-        //Busca un espacio vacio en el Array de Tanques
-        for(int j=0; j<10; j++)
-        {
-            if(tanques[j]==null)
-            {
-                tanques[j]=nuevoCubico;
-            }
-            break;
-        }
+        tanques.add(temporal);
+       
     }
     
     /**
@@ -63,11 +59,7 @@ public class Acueducto {
     {   cantAgua=0;
         for(Tanque tanque:tanques)
         {
-            if(tanque!=null)
-            {
-                cantAgua+=tanque.getCantAgua();
-                return cantAgua;
-            }
+            cantAgua+=tanque.getCantAgua();
         }
         return cantAgua;
     }
@@ -82,23 +74,19 @@ public class Acueducto {
      * @param municipios municipios de las valvulas
      * @param habitantes cantidad de habitantes de los municipios
      */
-    public void agregarOrtogonal(String forma, long id, double alto, double ancho, double largo, ArrayList<String> municipios, ArrayList<Integer> habitantes)
+    public void agregarOrtogonal(String forma, String id, double alto, double ancho, double largo, ArrayList<String> municipios, ArrayList<Integer> habitantes)
     {
-        Ortogonal nuevoOrtogonal= new Ortogonal(forma,id,alto,ancho,largo);
-        for(int i=0; i<10; i++)
+        Tanque temporal=null;
+        temporal = new Ortogonal(forma,id,alto,ancho,largo);
+        for(int i=0; i<municipios.size(); i++)
         {
-            nuevoOrtogonal.ingresarValvula(i+1, municipios.get(i), habitantes.get(i));
+            temporal.ingresarValvula(i+1, municipios.get(i), habitantes.get(i));
         }
-        
+        temporal.setDimensiones();
+        temporal.setCapacidad();
+        temporal.llenarTanque();
         //Busca un espacio vacio en el Array de Tanques
-        for(int j=0; j<10; j++)
-        {
-            if(tanques[j]==null)
-            {
-                tanques[j]=nuevoOrtogonal;
-            }
-            break;
-        }
+        tanques.add(temporal);
     }
     
     /**
@@ -110,23 +98,20 @@ public class Acueducto {
      * @param municipios municipios de las valvulas
      * @param habitantes cantidad de habitantes de los municipios
      */
-    public void agregarCilindrico(String forma, long id, double alto, double radio, ArrayList<String> municipios, ArrayList<Integer> habitantes)
+    public void agregarCilindrico(String forma, String id, double alto, double radio, ArrayList<String> municipios, ArrayList<Integer> habitantes)
     {
-        Cilindrico nuevoCilindro= new Cilindrico(forma,id,alto,radio);
-        for(int i=0; i<10; i++)
+        Tanque temporal=null;
+         temporal = new Cilindrico(forma,id,alto,radio);
+        for(int i=0; i<municipios.size(); i++)
         {
-            nuevoCilindro.ingresarValvula(i+1, municipios.get(i), habitantes.get(i));
+            temporal.ingresarValvula(i+1, municipios.get(i), habitantes.get(i));
         }
+        temporal.setDimensiones();
+        temporal.setCapacidad();
+        temporal.llenarTanque();
         
-        //Busca un espacio vacio en el Array de Tanques
-        for(int j=0; j<10; j++)
-        {
-            if(tanques[j]==null)
-            {
-                tanques[j]=nuevoCilindro;
-            }
-            break;
-        }
+        tanques.add(temporal);
+        
     }
     
     /**
@@ -138,7 +123,8 @@ public class Acueducto {
         valvCilindros=0;
         for(Tanque tanque:tanques)
         {
-            if(tanque.getForma().equals("CILINDRO"))
+            if (tanque!=null) {
+                if(tanque.getForma().equals("CILINDRO"))
             {
                 for(Valvula valve: tanque.valvulas)
                 {
@@ -147,6 +133,7 @@ public class Acueducto {
                         valvCilindros++;
                     }
                 }
+            }
             }
         }
         return valvCilindros;
@@ -157,14 +144,16 @@ public class Acueducto {
      * @param id numero del tanque
      * @return cantidad de agua
      */
-    public double aguaDisponible(long id)
+    public double aguaDisponible(String id)
     {   double agua=0;
         for(Tanque tanque:tanques)
         {
-            if(tanque.getID()==(id))
+            if (tanque!=null) {
+                if(tanque.getID()==(id))
             {
                 agua=tanque.getCantAgua();
                 return agua;
+            }
             }
         }
         return agua;
@@ -175,15 +164,17 @@ public class Acueducto {
      * @param id numero de identificacion
      * @return capacidad
      */
-    public double capacidadTanque(long id)
+    public double capacidadTanque(String id)
     {
         double cap=0;
         for(Tanque tanque:tanques)
         {
-            if(tanque.getID()==(id))
+            if (tanque!=null) {
+                 if(tanque.getID()==(id))
             {
                 cap=tanque.getCapacidad();
                 return cap;
+            }
             }
         }
         return cap;
@@ -193,13 +184,15 @@ public class Acueducto {
      * Llena el tanque a su capacidad maxima
      * @param id numero de identificacion del tanque
      */
-    public void llenarTanque(long id)
+    public void llenarTanque(String id)
     {
        for(Tanque tanque:tanques)
         {
-            if(tanque.getID()==(id))
+            if (tanque!=null) {
+                if(tanque.getID()==(id))
             {
                 tanque.llenarTanque();
+            }
             }
         } 
     }
@@ -213,27 +206,33 @@ public class Acueducto {
         String t="";
         for(Tanque tanque:tanques)
         {
+            if (tanque!=null) {
+                
             t+=tanque.toString();
             t+="\n";
+            }
         }
         return t;
     }
+  
     
     /**
      * Indica el porcentaje de agua dentro del tanque
      * @param id numero del tanque
      * @return porcentaje
      */
-    public double getPorcentaje(long id)
+    public double getPorcentaje(String id)
     {
         double p=0;
         for(Tanque tanque:tanques)
         {
-            if(tanque.getID()==(id))
+            if (tanque!=null) {
+                if(tanque.getID()==(id))
             {
                 tanque.setPorcentaje();
                 p=tanque.getPorcentajeRestante();
                 return p;
+            }
             }
         }
         return p;
@@ -258,13 +257,15 @@ public class Acueducto {
      * @param numero numero de valvula
      * @param fecha fecha de apertura
      */
-    public void abrirValvula(long id, int numero, String fecha)
+    public void abrirValvula(String id, int numero, String fecha)
     {
         for(Tanque tanque:tanques)
         {
-            if(tanque.getID()==(id))
+            if (tanque!=null) {
+                if(tanque.getID()==(id))
             {
                 tanque.abrirValvula(numero,fecha);
+            }
             }
         }
     }
@@ -275,13 +276,15 @@ public class Acueducto {
      * @param numero numero de valvula
      * @param fecha fecha de cierre
      */
-    public void abrirCerrar(long id, int numero, String fecha)
+    public void abrirCerrar(String id, int numero, String fecha)
     {
         for(Tanque tanque:tanques)
         {
-            if(tanque.getID()==(id))
+            if (tanque!=null) {
+                if(tanque.getID()==(id))
             {
                 tanque.cerrarValvula(numero,fecha);
+            }
             }
         }
     }
@@ -291,12 +294,13 @@ public class Acueducto {
      * @param id numero de tanque
      * @return lista de las valvulas
      */
-    public Valvula[] getValvulas(long id)
+    public Valvula[] getValvulas(String id)
     {
         Valvula[] thisvalvulas = new Valvula[10];
         for(Tanque tanque:tanques)
         {
-            if(tanque.getID()==(id))
+            if (tanque!=null) {
+                if(tanque.getID()==(id))
             {
                 for(Valvula valve:tanque.valvulas)
                 {
@@ -309,8 +313,23 @@ public class Acueducto {
                     }
                 }
             }
+            }
         }
         return thisvalvulas;
+    }
+    
+    
+    public boolean verificarIDTanque(String idTanque){
+       boolean verificacion=false;
+        for (Tanque tanque : tanques) {
+            if (tanque.getID().equals(idTanque)) {
+                verificacion=true;
+            }
+            else{
+                verificacion=false;
+            }
+        }
+        return verificacion;
     }
     
     

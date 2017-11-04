@@ -22,7 +22,7 @@ public class Cilindrico extends Tanque{
      * @param alto altura
      * @param radio radio de la base
      */
-    public Cilindrico(String forma, long id, double alto, double radio) {
+    public Cilindrico(String forma, String id, double alto, double radio) {
         super(forma, id, alto);
         this.radio=radio;
     }

@@ -21,7 +21,7 @@ public class Ortogonal extends Tanque{
      * @param ancho ancho de la base
      * @param largo largo de la base
      */
-    public Ortogonal(String forma, long id, double alto, double ancho, double largo) {
+    public Ortogonal(String forma, String id, double alto, double ancho, double largo) {
         super(forma, id, alto);
         this.ancho=ancho;
         this.largo=largo;

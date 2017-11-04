@@ -7,12 +7,14 @@
 
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
  *
  * @author Jose Tejada
  */
 public class GuiPrincipal extends javax.swing.JFrame {
     private Acueducto acueducto;
+    
     
     /**
      * Creates new form GuiPrincipal
@@ -82,7 +84,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButtonAgregarTanqueNuevo = new javax.swing.JButton();
         jFrameValvulas = new javax.swing.JFrame();
         jPanel4 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
@@ -157,6 +159,12 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jButtonVerTanquesRegistrados = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        jFrameNuevoTanque.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                jFrameNuevoTanqueWindowOpened(evt);
+            }
+        });
+
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -171,6 +179,11 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jLabel6.setText("Dimensiones");
 
         jComboBoxTipoTanque.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cilindrico", "Ortogonal", "Cubico" }));
+        jComboBoxTipoTanque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxTipoTanqueActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("Ancho/Radio");
 
@@ -405,11 +418,11 @@ public class GuiPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton1.setText("Agregar Tanque");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAgregarTanqueNuevo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonAgregarTanqueNuevo.setText("Agregar Tanque");
+        jButtonAgregarTanqueNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonAgregarTanqueNuevoActionPerformed(evt);
             }
         });
 
@@ -425,7 +438,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
                     .addGroup(jFrameNuevoTanqueLayout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonAgregarTanqueNuevo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jFrameNuevoTanqueLayout.setVerticalGroup(
@@ -437,7 +450,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+                .addComponent(jButtonAgregarTanqueNuevo, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -817,6 +830,11 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jLabel27.setText("Tanques de la region");
 
         jButtonSalirTanques.setText("Salir");
+        jButtonSalirTanques.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalirTanquesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jFrameTanquesLayout = new javax.swing.GroupLayout(jFrameTanques.getContentPane());
         jFrameTanques.getContentPane().setLayout(jFrameTanquesLayout);
@@ -895,6 +913,11 @@ public class GuiPrincipal extends javax.swing.JFrame {
 
         jButtonVerTanquesRegistrados.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jButtonVerTanquesRegistrados.setText("Ver Tanques Registrados");
+        jButtonVerTanquesRegistrados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVerTanquesRegistradosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -982,26 +1005,122 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jFrameNuevoTanque.setVisible(true);
     }//GEN-LAST:event_jButtonAgregarTanqueActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonAgregarTanqueNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarTanqueNuevoActionPerformed
         // TODO add your handling code here:
-        ArrayList<String> municipios=new ArrayList<String>();
-        ArrayList<Integer> habitantes=new ArrayList<Integer>();
-        
-        
-        if(jComboBoxTipoTanque.getSelectedItem().equals("Cilindrico"))
-        {
-            //acueducto.agregarCilindrico("Cilindrico",)
+         String tipoTanqueEscogido=(String) jComboBoxTipoTanque.getSelectedItem();
+         String idTanque=jTextFieldIdTanque.getText();
+         ArrayList<Integer> habitantes= new ArrayList<>();
+         ArrayList<String> municipios= new ArrayList<>();
+         double radioTanque=0;
+         double LargoTanque=0;
+         double AltoTanque=0;
+         
+         switch (tipoTanqueEscogido.toUpperCase()) {
+             case "CILINDRICO":
+                 try {
+                     radioTanque=Double.parseDouble(jTextFieldAnchoRadioTanque.getText());
+                     AltoTanque=Double.parseDouble(jTextFieldAltoTanque.getText());
+                     if (acueducto.verificarIDTanque(idTanque)==false) {
+                         acueducto.agregarCilindrico(tipoTanqueEscogido, idTanque, AltoTanque, radioTanque, retornarListaMunicipios(), retornarListaHabitantes());
+                         JOptionPane.showMessageDialog(null, "Tanque Agregado");
+                     }
+                     else if (acueducto.verificarIDTanque(idTanque)==true) {
+                         JOptionPane.showMessageDialog(null, "El id del tanque ya existe, use otro.");
+                     }
+                 } catch (NumberFormatException e) {
+                     JOptionPane.showMessageDialog(null, "Un valor o valores ingresados en el campo de Ancho/Radio o Alto no es numero.");
+                     radioTanque=0;
+                     LargoTanque=0;
+                     AltoTanque=0;
+                     tipoTanqueEscogido="";
+                     idTanque="";
+                     
+                 }   break;
+             case "CUBICO":
+                 try {
+                     radioTanque=Double.parseDouble(jTextFieldAnchoRadioTanque.getText());
+                     if (acueducto.verificarIDTanque(idTanque)==false) {
+                        acueducto.agregarCubico(tipoTanqueEscogido, idTanque, radioTanque, retornarListaMunicipios(), retornarListaHabitantes());
+                     JOptionPane.showMessageDialog(null, "Tanque Agregado");
+                     }
+                     else if (acueducto.verificarIDTanque(idTanque)==true) {
+                         JOptionPane.showMessageDialog(null, "El id del tanque ya existe, use otro.");
+                     }
+                 } catch (NumberFormatException e) {
+                     JOptionPane.showMessageDialog(null, "El valor ingresado en el campo de Ancho/Radio no es un numero.");
+                     radioTanque=0;
+                     LargoTanque=0;
+                     AltoTanque=0;
+                     tipoTanqueEscogido="";
+                     idTanque="";
+                 }   break;
+             case "ORTOGONAL":
+                 try {
+                     radioTanque=Double.parseDouble(jTextFieldAnchoRadioTanque.getText());
+                     AltoTanque=Double.parseDouble(jTextFieldAltoTanque.getText());
+                     LargoTanque=Double.parseDouble(jTextFieldLargoTanque.getText());
+                     
+                     if (acueducto.verificarIDTanque(idTanque)==false) {
+                        acueducto.agregarCubico(tipoTanqueEscogido, idTanque, radioTanque, retornarListaMunicipios(), retornarListaHabitantes());
+                     JOptionPane.showMessageDialog(null, "Tanque Agregado");
+                     }
+                     else if (acueducto.verificarIDTanque(idTanque)==true) {
+                         JOptionPane.showMessageDialog(null, "El id del tanque ya existe, use otro.");
+                     }
+                 } catch (NumberFormatException e) {
+                     JOptionPane.showMessageDialog(null, "Un valor o valores ingresados en el campo de Ancho/Radio, Alto o Largo no es numero.");
+                     radioTanque=0;
+                     LargoTanque=0;
+                     AltoTanque=0;
+                     tipoTanqueEscogido="";
+                     idTanque="";
+                 }   break;
+             default:
+                 break;
+         }
+         
+              System.out.println("Informacion: "+ acueducto.getTanquesAcueducto());
+    }//GEN-LAST:event_jButtonAgregarTanqueNuevoActionPerformed
+    public ArrayList<Integer> retornarListaHabitantes(){
+        ArrayList<Integer> habitantes= new ArrayList<>();
+        try {
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula1.getText()));  
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula2.getText())); 
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula3.getText())); 
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula4.getText())); 
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula5.getText())); 
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula6.getText())); 
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula7.getText())); 
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula8.getText())); 
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula9.getText()));
+          habitantes.add(Integer.parseInt(jTextFieldHabitantesValvula10.getText()));
+          
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Un valor en el campo de habitantes es una letra o contiene letras, ingrese solo numero enteros.");
+            habitantes.clear();
         }
-        else if(jComboBoxTipoTanque.getSelectedItem().equals("Cubico"))
-        {
-            
+        return habitantes;
+    }
+    
+    public ArrayList<String> retornarListaMunicipios(){
+        ArrayList<String> municipios= new ArrayList<>();
+        try {
+            municipios.add(jTextFieldMunicipioValvula1.getText());
+            municipios.add(jTextFieldMunicipioValvula2.getText());
+            municipios.add(jTextFieldMunicipioValvula3.getText());
+            municipios.add(jTextFieldMunicipioValvula4.getText());
+            municipios.add(jTextFieldMunicipioValvula5.getText());
+            municipios.add(jTextFieldMunicipioValvula6.getText());
+            municipios.add(jTextFieldMunicipioValvula7.getText());
+            municipios.add(jTextFieldMunicipioValvula8.getText());
+            municipios.add(jTextFieldMunicipioValvula9.getText());
+            municipios.add(jTextFieldMunicipioValvula10.getText());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ocurrió un error, ingrese de nuevo los valores de municipios.");
+            municipios.clear();
         }
-        else if(jComboBoxTipoTanque.getSelectedItem().equals("Ortogonal"))
-        {
-            
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+        return municipios;
+    }
     private void jButtonVerValvulasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerValvulasActionPerformed
         // TODO add your handling code here:
         jFrameValvulas.pack();
@@ -1018,7 +1137,63 @@ public class GuiPrincipal extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Cantidad de valvulas de tanques cilindricos abiertas:\n"+String.valueOf(acueducto.valvulasAbiertasCilindro()));
     }//GEN-LAST:event_jButtonValvulasAbiertasCilindricosActionPerformed
 
-    /**
+    private void jFrameNuevoTanqueWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_jFrameNuevoTanqueWindowOpened
+        // TODO add your handling code here:
+        borrarCamposTanque();
+    }//GEN-LAST:event_jFrameNuevoTanqueWindowOpened
+
+    private void jComboBoxTipoTanqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoTanqueActionPerformed
+        // TODO add your handling code here:
+         // TODO add your handling code here:
+         String a=null;
+          a= (String) jComboBoxTipoTanque.getSelectedItem();//recogemos el dato que se seleccionó
+          if (a.toUpperCase().equals("CILINDRICO")) {
+              jTextFieldLargoTanque.setEditable(false);
+             jTextFieldAnchoRadioTanque.setEditable(true);
+             jTextFieldAltoTanque.setEditable(true);
+          }
+         else if ((a.toUpperCase().equals("ORTOGONAL"))) {
+              jTextFieldLargoTanque.setEditable(true);
+              jTextFieldAnchoRadioTanque.setEditable(true);
+              jTextFieldAltoTanque.setEditable(true);
+          }
+         else if (a.toUpperCase().equals("CUBICO")) {
+             jTextFieldLargoTanque.setEditable(false);
+             jTextFieldAltoTanque.setEditable(false);
+             jTextFieldAnchoRadioTanque.setEditable(true);
+         }
+         borrarCamposTanque();
+    }//GEN-LAST:event_jComboBoxTipoTanqueActionPerformed
+
+    private void jButtonVerTanquesRegistradosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerTanquesRegistradosActionPerformed
+        // TODO add your handling code here:
+        jFrameTanques.pack();
+        jFrameTanques.setVisible(true);
+        
+        llenarInformacionTanques();
+    }//GEN-LAST:event_jButtonVerTanquesRegistradosActionPerformed
+
+    private void jButtonSalirTanquesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirTanquesActionPerformed
+        // TODO add your handling code here:
+        
+        jFrameTanques.setVisible(false);
+    }//GEN-LAST:event_jButtonSalirTanquesActionPerformed
+
+    public void llenarInformacionTanques(){
+       jTextAreaTanques.setText("");
+       jTextAreaTanques.append("INFORMACION DE TANQUES"); 
+       jTextAreaTanques.append(System.getProperty("line.separator")); // Esto para el salto de línea 
+       jTextAreaTanques.append(System.getProperty("line.separator")); // Esto para el salto de línea 
+       jTextAreaTanques.append(acueducto.getTanquesAcueducto());
+       
+    }
+    public void borrarCamposTanque(){
+        jTextFieldLargoTanque.setText("");
+         jTextFieldAnchoRadioTanque.setText("");
+         jTextFieldAltoTanque.setText("");
+         jTextFieldIdTanque.setText("");
+     }
+    /*
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -1055,7 +1230,6 @@ public class GuiPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAbrir1;
     private javax.swing.JButton jButtonAbrir10;
     private javax.swing.JButton jButtonAbrir2;
@@ -1067,6 +1241,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonAbrir8;
     private javax.swing.JButton jButtonAbrir9;
     private javax.swing.JButton jButtonAgregarTanque;
+    private javax.swing.JButton jButtonAgregarTanqueNuevo;
     private javax.swing.JButton jButtonAguaDisponibleRegion;
     private javax.swing.JButton jButtonCerrar1;
     private javax.swing.JButton jButtonCerrar10;

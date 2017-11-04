@@ -16,9 +16,8 @@ public class Cubico extends Tanque{
      * @param id numero de identificacion
      * @param alto altura
      */
-    public Cubico(String forma, long id, double alto)
+    public Cubico(String forma, String id, double alto)
     {
         super(forma, id, alto);
     }
-    
 }

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Tanque {
     //Atributos
     protected String forma, dimensiones;
-    protected long id;
+    protected String id;
     protected double alto, capacidad, cantAgua, porcentajeRestante;
     protected Valvula[] valvulas;
     
@@ -24,7 +24,7 @@ public class Tanque {
      * @param id long de identificacion
      * @param alto alto
      */
-    public Tanque(String forma, long id, double alto)
+    public Tanque(String forma, String id, double alto)
     {
         this.forma=forma;
         this.id=id;
@@ -106,7 +106,7 @@ public class Tanque {
      * 
      * @return numero de identificacion del tanque
      */
-    public long getID()
+    public String getID()
     {
         return id;
     }
