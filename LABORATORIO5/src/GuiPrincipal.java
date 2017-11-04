@@ -1087,6 +1087,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
                 break;
         }
         
+        
     
         
         
