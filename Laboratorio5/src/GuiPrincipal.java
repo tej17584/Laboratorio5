@@ -5,6 +5,8 @@
  * 3/11/2017
  */
 
+
+import java.util.ArrayList;
 /**
  *
  * @author Jose Tejada
@@ -338,6 +340,11 @@ public class GuiPrincipal extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("Agregar Tanque");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jFrameNuevoTanqueLayout = new javax.swing.GroupLayout(jFrameNuevoTanque.getContentPane());
         jFrameNuevoTanque.getContentPane().setLayout(jFrameNuevoTanqueLayout);
@@ -488,6 +495,25 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jFrameNuevoTanque.pack();
         jFrameNuevoTanque.setVisible(true);
     }//GEN-LAST:event_jButtonAgregarTanqueActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        ArrayList<String> municipios=new ArrayList<String>();
+        ArrayList<Integer> habitantes=new ArrayList<Integer>();
+        
+        if(jComboBoxTipoTanque.getSelectedItem().equals("Cilindrico"))
+        {
+            
+        }
+        else if(jComboBoxTipoTanque.getSelectedItem().equals("Cubico"))
+        {
+            
+        }
+        else if(jComboBoxTipoTanque.getSelectedItem().equals("Ortogonal"))
+        {
+            
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
