@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * GuiPrincipal.java
+ * Interfaz grafica de ingreso de datos
+ * Andrea Arguello 17801 Alejandro Tejada 17584
+ * 3/11/2017
  */
 
 /**
