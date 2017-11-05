@@ -1497,6 +1497,8 @@ public class GuiPrincipal extends javax.swing.JFrame {
             porcentajeBajo.porcentajeBajo(acueducto.getPorcentaje(id));
             int numvalve=Integer.parseInt((String)jComboBoxNumeroValvula1.getSelectedItem());
             repetirEstadoValvula.repetirEstadoValvula(acueducto.getEstadoValvula(id,numvalve),true);
+            Valvula[] valvulas=acueducto.getValvulas(id);
+            hayAguaInsuficiente.hayAguaInsuficiente(valvulas[numvalve-1].getHabitantes(),acueducto.aguaDisponible(id));
             String fecha=jTextFieldFechaAbrir.getText();
             acueducto.abrirValvula(id,numvalve,fecha);
             JOptionPane.showMessageDialog(null,"Valvula Abierta. Actualize la pestana anterior.");
@@ -1517,6 +1519,10 @@ public class GuiPrincipal extends javax.swing.JFrame {
         catch(ValvulaAbiertaException e)
         {
             JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+        catch(AguaInsuficienteException e)
+        {
+            JOptionPane.showMessageDialog(null,e.getMessage(),"Alerta",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButtonAbrirValvulaActionPerformed
 

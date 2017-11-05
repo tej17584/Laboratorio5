@@ -336,6 +336,11 @@ public class Acueducto {
         return estado;
     }
     
+    /**
+     * Verifica si el tanque ya existe
+     * @param idTanque id a ingresar
+     * @return existe o no
+     */
     public boolean verificarIDTanque(String idTanque){
        boolean verificacion=false;
         for (Tanque tanque : tanques) {
