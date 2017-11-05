@@ -155,6 +155,20 @@ public class Tanque {
         }
     }
     
+    public boolean estadoValvula(int numero)
+    {   boolean estado=false;
+        for(Valvula valve: valvulas)
+        {
+            if (valve.getNumero()==numero)
+            {
+                estado=valve.getAbierto();
+                return estado;
+            }
+        }
+        return estado;
+    }
+    
+    
     /**
      * Llena el tanque a su capacidad maxima
      */

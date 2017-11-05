@@ -318,12 +318,25 @@ public class Acueducto {
         return thisvalvulas;
     }
     
+    public boolean getEstadoValvula(String id, int num)
+    {   boolean estado=false;
+        for(Tanque tanque:tanques)
+        {
+            if(tanque.getID().equals(id))
+            {
+                estado=tanque.estadoValvula(num);
+                return estado;
+            }
+        }
+        return estado;
+    }
     
     public boolean verificarIDTanque(String idTanque){
        boolean verificacion=false;
         for (Tanque tanque : tanques) {
             if (tanque.getID().equals(idTanque)) {
                 verificacion=true;
+                return verificacion;
             }
             else{
                 verificacion=false;

@@ -1256,7 +1256,6 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private void jButtonBuscarTanqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarTanqueActionPerformed
         // TODO add your handling code here:
         String tanque=jTextFieldIngresarTanque.getText();
-        System.out.println(acueducto.aguaDisponible(tanque));
         if(acueducto.verificarIDTanque(tanque)==true)
         {
             jTextFieldMetrosTanque.setText(String.valueOf(acueducto.aguaDisponible(tanque)));
@@ -1410,24 +1409,43 @@ public class GuiPrincipal extends javax.swing.JFrame {
         String id=jTextFieldIngresarTanque.getText();
         try{
             porcentajeBajo.porcentajeBajo(acueducto.getPorcentaje(id));
-            int numvalve=(int)jComboBoxNumeroValvula1.getSelectedItem();
+            int numvalve=Integer.parseInt((String)jComboBoxNumeroValvula1.getSelectedItem());
+            repetirEstadoValvula.repetirEstadoValvula(acueducto.getEstadoValvula(id,numvalve),true);
             String fecha=jTextFieldFechaAbrir.getText();
-            acueducto.abrirValvula(id,numvalve-1,fecha);
+            acueducto.abrirValvula(id,numvalve,fecha);
             JOptionPane.showMessageDialog(null,"Valvula Abierta. Actualize la pestana anterior.");
         }
         catch(NivelBajoException e)
         {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Alerta", JOptionPane.ERROR_MESSAGE);
-        }  
+            if(e.getPorcentaje()==10)
+            {
+                for(int i=1; i<11; i++)
+                {
+                    acueducto.cerrarValvula(id, i, jTextFieldFechaAbrir.getText());
+                }
+            }
+        }
+        catch(ValvulaAbiertaException e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_jButtonAbrirValvulaActionPerformed
 
     private void jButtonCerrarValvulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarValvulaActionPerformed
         // TODO add your handling code here:
         String id=jTextFieldIngresarTanque.getText();
-        int numvalve=(int)jComboBoxNumeroValvula2.getSelectedItem();
-        String fecha=jTextFieldFechaCerrar.getText();
-        acueducto.abrirValvula(id,numvalve-1,fecha);
-        JOptionPane.showMessageDialog(null,"Valvula Cerrada. Actualize la pestana anterior.");
+        try{
+            int numvalve=Integer.parseInt((String)jComboBoxNumeroValvula2.getSelectedItem());
+            repetirEstadoValvula.repetirEstadoValvula(acueducto.getEstadoValvula(id,numvalve),false);
+            String fecha=jTextFieldFechaCerrar.getText();
+            acueducto.cerrarValvula(id,numvalve-1,fecha);
+            JOptionPane.showMessageDialog(null,"Valvula Cerrada. Actualize la pestana anterior.");
+        }
+        catch(ValvulaAbiertaException e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_jButtonCerrarValvulaActionPerformed
 
     public void llenarInformacionTanques(){

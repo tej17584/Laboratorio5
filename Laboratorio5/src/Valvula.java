@@ -30,6 +30,8 @@ public class Valvula {
         this.habitantes=habitantes;
         this.numero=numero;
         abierto=false;
+        fechasAbrir= new ArrayList<String>();
+        fechasCerrar=new ArrayList<String>();
     }
     
     /**

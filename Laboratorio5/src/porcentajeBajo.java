@@ -13,7 +13,6 @@ import javax.swing.JOptionPane;
 public class porcentajeBajo {
     //Atributos
     public static final double noAbrir=25, cerrarTodo=10;
-    
     /**
      * 
      * @param valor valor de la excepcion
@@ -28,7 +27,7 @@ public class porcentajeBajo {
         
         alerta ="\nPorcentaje:" + valor +"%";
         //Si es menor o igual a 25%
-        if(valor<=noAbrir)
+        if(valor<=noAbrir && valor>cerrarTodo)
         {
             alerta+="\nNecesita rellenar el tanque. No podra abrir mas valvulas.";
             porcentaje=25;
@@ -42,6 +41,7 @@ public class porcentajeBajo {
             porcentaje=10;
             excepcion = new NivelBajoException(alerta,porcentaje);
             throw excepcion;
+            
         }
         
         
