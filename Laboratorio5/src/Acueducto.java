@@ -123,8 +123,8 @@ public class Acueducto {
         valvCilindros=0;
         for(Tanque tanque:tanques)
         {
-            if (tanque!=null) {
-                if(tanque.getForma().equals("CILINDRO"))
+            
+                if(tanque.getForma().toUpperCase().equals("CILINDRICO"))
             {
                 for(Valvula valve: tanque.valvulas)
                 {
@@ -133,7 +133,6 @@ public class Acueducto {
                         valvCilindros++;
                     }
                 }
-            }
             }
         }
         return valvCilindros;
