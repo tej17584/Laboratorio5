@@ -155,6 +155,11 @@ public class Tanque {
         }
     }
     
+    /**
+     * Indica si una valvula esta abierta o no
+     * @param numero numero de valvula
+     * @return true para abierta, false para cerrada
+     */
     public boolean estadoValvula(int numero)
     {   boolean estado=false;
         for(Valvula valve: valvulas)

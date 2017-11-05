@@ -1,13 +1,13 @@
 /*
  * porcentajeBajo.java
- * Implementa la excepcion
+ * Implementa la excepcion de porcentajes
  * Andrea Arguello 17801 Alejandro Tejada 17584
  * 2/11/2017
  */
-import javax.swing.JOptionPane;
+
 /**
  *
- * @author Usuario
+ * @author Andrea
  */
 
 public class porcentajeBajo {

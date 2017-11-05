@@ -7,7 +7,7 @@
 
 /**
  *
- * @author Usuario
+ * @author Andrea
  */
 public class NivelBajoException extends Exception {
     //Atributos

@@ -1,16 +1,24 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * repetirEstadoValvula.java
+ * Implementa la excepcion de valvulas
+ * Andrea Arguello 17801 Alejandro Tejada 17584
+ * 4/11/2017
  */
 
 /**
  *
- * @author Usuario
+ * @author Andrea
  */
 public class repetirEstadoValvula {
+    //Atributos
     public static final boolean abierto=true, cerrado=false;
     
+    /**
+     * 
+     * @param estado estado actual de la valvula
+     * @param quieroAbrir estado al que se quiere cambiar
+     * @throws ValvulaAbiertaException indica que a lo que se quiere cambiar es al estado actual
+     */
     public static void repetirEstadoValvula(boolean estado, boolean quieroAbrir) throws ValvulaAbiertaException
     {
         ValvulaAbiertaException excepcion;
@@ -19,7 +27,7 @@ public class repetirEstadoValvula {
         
         
         alerta="Esta valvula ya esta ";
-        if(estado=abierto && quieroAbrir==true)
+        if(estado==abierto && quieroAbrir==abierto)
         {
             alerta+="abierta";
             estaAbierto=true;
@@ -27,7 +35,7 @@ public class repetirEstadoValvula {
             throw excepcion;
         }
         
-        if(estado=cerrado && quieroAbrir==false)
+        if(estado==cerrado && quieroAbrir==cerrado)
             {
             alerta+="cerrada";
             estaAbierto=false;

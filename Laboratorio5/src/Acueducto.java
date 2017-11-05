@@ -318,6 +318,12 @@ public class Acueducto {
         return thisvalvulas;
     }
     
+    /**
+     * Indica el estado de una valvula de un tanque
+     * @param id identificacion del tanque
+     * @param num numero de tanque
+     * @return estado de la valvula (abierto es true)
+     */
     public boolean getEstadoValvula(String id, int num)
     {   boolean estado=false;
         for(Tanque tanque:tanques)

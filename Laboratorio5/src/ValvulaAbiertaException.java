@@ -1,12 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * ValvulaAbiertaException.java
+ * Excepcion si se trata de abrir/cerrar una valvula que ya está abierta/cerrada respectivamente
+ * Andrea Arguello 17801 Alejandro Tejada 17584
+ * 4/11/2017
  */
 
 /**
  *
- * @author Usuario
+ * @author Andrea
  */
 public class ValvulaAbiertaException extends Exception{
     private boolean abierto;
