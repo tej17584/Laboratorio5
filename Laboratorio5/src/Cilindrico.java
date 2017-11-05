@@ -33,7 +33,7 @@ public class Cilindrico extends Tanque{
     @Override
     public void setDimensiones()
     {
-        this.dimensiones="radio: "+radio+"\nAlto:"+alto;
+        this.dimensiones="Radio: "+radio+"m\tAlto:"+alto+"m";
     }
     
     /**

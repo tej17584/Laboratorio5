@@ -33,7 +33,7 @@ public class Ortogonal extends Tanque{
     @Override
     public void setDimensiones()
     {
-        this.dimensiones=alto+"x"+ancho+"x"+largo+"m^3";
+        this.dimensiones=alto+"(alto) x"+ancho+"(ancho) x"+largo+"(largo) m^3";
     }
     
     /**

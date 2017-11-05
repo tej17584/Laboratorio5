@@ -157,9 +157,9 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
-                    <StringItem index="0" value="Cilindrico"/>
-                    <StringItem index="1" value="Ortogonal"/>
-                    <StringItem index="2" value="Cubico"/>
+                    <StringItem index="0" value="Ortogonal"/>
+                    <StringItem index="1" value="Cubico"/>
+                    <StringItem index="2" value="Cilindrico"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -520,13 +520,14 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButtonSalirValvulas" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel4" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jPanel4" alignment="1" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jButtonSalirValvulas" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -556,16 +557,22 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jComboBoxIDTanque" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jTextFieldMetrosTanque" min="-2" pref="56" max="-2" attributes="0"/>
-                                          </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jProgressBarAguaTanque" min="-2" pref="118" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jButtonLlenarTanque" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="jTextFieldIngresarTanque" alignment="0" max="32767" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="jTextFieldMetrosTanque" min="-2" pref="56" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jButtonBuscarTanque" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -574,10 +581,10 @@
                                       <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="58" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="23" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="27" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabelAbierto1" min="-2" max="-2" attributes="0"/>
@@ -632,82 +639,20 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jTextFieldMunicipio10" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jButtonAbrir10" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jButtonCerrar10" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jTextFieldMunicipio9" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jButtonAbrir9" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jButtonCerrar9" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jTextFieldMunicipio8" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jButtonAbrir8" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jButtonCerrar8" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jTextFieldMunicipio7" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jButtonAbrir7" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jButtonCerrar7" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jTextFieldMunicipio6" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jButtonAbrir6" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jButtonCerrar6" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jTextFieldMunicipio5" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jButtonAbrir5" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jButtonCerrar5" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jTextFieldMunicipio4" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jButtonAbrir4" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jButtonCerrar4" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jTextFieldMunicipio1" min="-2" pref="115" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jButtonAbrir1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jButtonCerrar1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jTextFieldMunicipio2" min="-2" pref="115" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jButtonAbrir2" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jTextFieldMunicipio3" min="-2" pref="115" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jButtonAbrir3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jButtonCerrar3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jButtonCerrar2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                  <Component id="jTextFieldMunicipio10" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldMunicipio9" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldMunicipio8" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldMunicipio7" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldMunicipio6" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldMunicipio5" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldMunicipio4" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldMunicipio1" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldMunicipio2" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldMunicipio3" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jButtonAbrir" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jButtonCerrar" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -722,7 +667,10 @@
                   <Group type="102" attributes="0">
                       <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jComboBoxIDTanque" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTextFieldIngresarTanque" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonBuscarTanque" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -737,103 +685,70 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jTextFieldMunicipio1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelCerrado1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabelAbierto1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldMunicipio2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldMunicipio2" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelCerrado2" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAbierto2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldMunicipio3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldMunicipio3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelCerrado3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAbierto3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldMunicipio4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldMunicipio4" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelCerrado4" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAbierto4" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldMunicipio5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldMunicipio5" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelCerrado5" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAbierto5" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldMunicipio6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldMunicipio6" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelCerrado6" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAbierto6" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldMunicipio7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldMunicipio7" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelCerrado7" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAbierto7" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldMunicipio8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldMunicipio8" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelCerrado8" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAbierto8" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldMunicipio9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldMunicipio9" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelCerrado9" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAbierto9" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextFieldMunicipio10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonAbrir10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonCerrar10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jTextFieldMunicipio10" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelCerrado10" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAbierto10" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jButtonAbrir" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonCerrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -843,21 +758,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ingrese el Tanque"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBoxIDTanque">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel26">
               <Properties>
@@ -875,6 +775,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Llenar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLlenarTanqueActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldMunicipio1">
               <Properties>
@@ -926,105 +829,21 @@
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir1">
+            <Component class="javax.swing.JButton" name="jButtonAbrir">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
+                <Property name="text" type="java.lang.String" value="Abrir una valvula"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAbrirActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir2">
+            <Component class="javax.swing.JButton" name="jButtonCerrar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
+                <Property name="text" type="java.lang.String" value="Cerrar una valvula"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir3">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir4">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir5">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir6">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir7">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir8">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir9">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonAbrir10">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar3">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar4">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar5">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar6">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar7">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar8">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar9">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonCerrar10">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Cerrar"/>
-              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCerrarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelCerrado1">
               <Properties>
@@ -1166,6 +985,16 @@
                 </Property>
               </Properties>
             </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldIngresarTanque">
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonBuscarTanque">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="OK"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBuscarTanqueActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JButton" name="jButtonSalirValvulas">
@@ -1185,13 +1014,16 @@
                   <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="162" max="32767" attributes="0"/>
               </Group>
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jButtonSalirTanques" min="-2" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="262" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane1" pref="252" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jButtonSalirTanques" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1202,9 +1034,9 @@
                   <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="222" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButtonSalirTanques" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonSalirTanques" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1238,6 +1070,255 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSalirTanquesActionPerformed"/>
           </Events>
         </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="jFrameAbrir">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel5" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel5" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel5">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              <Component id="jComboBoxNumeroValvula1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jTextFieldFechaAbrir" min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonAbrirValvula" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="61" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBoxNumeroValvula1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTextFieldFechaAbrir" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonAbrirValvula" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="38" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel28">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Numero de Valvula que desea abrir"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="jComboBoxNumeroValvula1">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="10">
+                    <StringItem index="0" value="1"/>
+                    <StringItem index="1" value="2"/>
+                    <StringItem index="2" value="3"/>
+                    <StringItem index="3" value="4"/>
+                    <StringItem index="4" value="5"/>
+                    <StringItem index="5" value="6"/>
+                    <StringItem index="6" value="7"/>
+                    <StringItem index="7" value="8"/>
+                    <StringItem index="8" value="9"/>
+                    <StringItem index="9" value="10"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel29">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="9" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="NOTA: Guiese por el orden de la pestana anterior"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldFechaAbrir">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldFechaAbrirActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel30">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de apertura"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonAbrirValvula">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Abrir"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAbrirValvulaActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="jFrameCerrar">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel6" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel6" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel6">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              <Component id="jComboBoxNumeroValvula2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jTextFieldFechaCerrar" min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonCerrarValvula" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="55" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBoxNumeroValvula2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTextFieldFechaCerrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonCerrarValvula" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="25" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel31">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Numero de Valvula que desea cerrar"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="jComboBoxNumeroValvula2">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="10">
+                    <StringItem index="0" value="1"/>
+                    <StringItem index="1" value="2"/>
+                    <StringItem index="2" value="3"/>
+                    <StringItem index="3" value="4"/>
+                    <StringItem index="4" value="5"/>
+                    <StringItem index="5" value="6"/>
+                    <StringItem index="6" value="7"/>
+                    <StringItem index="7" value="8"/>
+                    <StringItem index="8" value="9"/>
+                    <StringItem index="9" value="10"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel32">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="9" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="NOTA: Guiese por el orden de la pestana anterior"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel33">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha de cierre"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldFechaCerrar">
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonCerrarValvula">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cerrar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCerrarValvulaActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </NonVisualComponents>

@@ -149,7 +149,7 @@ public class Acueducto {
         for(Tanque tanque:tanques)
         {
             if (tanque!=null) {
-                if(tanque.getID()==(id))
+                if(tanque.getID().equals(id))
             {
                 agua=tanque.getCantAgua();
                 return agua;
@@ -170,7 +170,7 @@ public class Acueducto {
         for(Tanque tanque:tanques)
         {
             if (tanque!=null) {
-                 if(tanque.getID()==(id))
+                 if(tanque.getID().equals(id))
             {
                 cap=tanque.getCapacidad();
                 return cap;
@@ -189,7 +189,7 @@ public class Acueducto {
        for(Tanque tanque:tanques)
         {
             if (tanque!=null) {
-                if(tanque.getID()==(id))
+                if(tanque.getID().equals(id))
             {
                 tanque.llenarTanque();
             }
@@ -227,7 +227,7 @@ public class Acueducto {
         for(Tanque tanque:tanques)
         {
             if (tanque!=null) {
-                if(tanque.getID()==(id))
+                if(tanque.getID().equals(id))
             {
                 tanque.setPorcentaje();
                 p=tanque.getPorcentajeRestante();
@@ -262,7 +262,7 @@ public class Acueducto {
         for(Tanque tanque:tanques)
         {
             if (tanque!=null) {
-                if(tanque.getID()==(id))
+                if(tanque.getID().equals(id))
             {
                 tanque.abrirValvula(numero,fecha);
             }
@@ -276,12 +276,12 @@ public class Acueducto {
      * @param numero numero de valvula
      * @param fecha fecha de cierre
      */
-    public void abrirCerrar(String id, int numero, String fecha)
+    public void cerrarValvula(String id, int numero, String fecha)
     {
         for(Tanque tanque:tanques)
         {
             if (tanque!=null) {
-                if(tanque.getID()==(id))
+                if(tanque.getID().equals(id))
             {
                 tanque.cerrarValvula(numero,fecha);
             }
@@ -300,7 +300,7 @@ public class Acueducto {
         for(Tanque tanque:tanques)
         {
             if (tanque!=null) {
-                if(tanque.getID()==(id))
+                if(tanque.getID().equals(id))
             {
                 for(Valvula valve:tanque.valvulas)
                 {

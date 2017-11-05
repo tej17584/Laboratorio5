@@ -21,7 +21,7 @@ public class Tanque {
     /**
      * 
      * @param forma forma del tanque
-     * @param id long de identificacion
+     * @param id numero de identificacion
      * @param alto alto
      */
     public Tanque(String forma, String id, double alto)
@@ -30,7 +30,6 @@ public class Tanque {
         this.id=id;
         this.alto=alto;
         valvulas = new Valvula[10];
-        cantAgua=0; //inicia el tanque vacio
     }
     
     /**
@@ -161,7 +160,7 @@ public class Tanque {
      */
     public void llenarTanque()
     {
-        cantAgua=capacidad;
+        this.cantAgua=capacidad;
     }
     
     /**

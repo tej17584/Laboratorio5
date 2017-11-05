@@ -88,7 +88,6 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jFrameValvulas = new javax.swing.JFrame();
         jPanel4 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
-        jComboBoxIDTanque = new javax.swing.JComboBox<>();
         jLabel26 = new javax.swing.JLabel();
         jTextFieldMetrosTanque = new javax.swing.JTextField();
         jProgressBarAguaTanque = new javax.swing.JProgressBar();
@@ -103,26 +102,8 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jTextFieldMunicipio8 = new javax.swing.JTextField();
         jTextFieldMunicipio9 = new javax.swing.JTextField();
         jTextFieldMunicipio10 = new javax.swing.JTextField();
-        jButtonAbrir1 = new javax.swing.JButton();
-        jButtonAbrir2 = new javax.swing.JButton();
-        jButtonAbrir3 = new javax.swing.JButton();
-        jButtonAbrir4 = new javax.swing.JButton();
-        jButtonAbrir5 = new javax.swing.JButton();
-        jButtonAbrir6 = new javax.swing.JButton();
-        jButtonAbrir7 = new javax.swing.JButton();
-        jButtonAbrir8 = new javax.swing.JButton();
-        jButtonAbrir9 = new javax.swing.JButton();
-        jButtonAbrir10 = new javax.swing.JButton();
-        jButtonCerrar1 = new javax.swing.JButton();
-        jButtonCerrar2 = new javax.swing.JButton();
-        jButtonCerrar3 = new javax.swing.JButton();
-        jButtonCerrar4 = new javax.swing.JButton();
-        jButtonCerrar5 = new javax.swing.JButton();
-        jButtonCerrar6 = new javax.swing.JButton();
-        jButtonCerrar7 = new javax.swing.JButton();
-        jButtonCerrar8 = new javax.swing.JButton();
-        jButtonCerrar9 = new javax.swing.JButton();
-        jButtonCerrar10 = new javax.swing.JButton();
+        jButtonAbrir = new javax.swing.JButton();
+        jButtonCerrar = new javax.swing.JButton();
         jLabelCerrado1 = new javax.swing.JLabel();
         jLabelCerrado2 = new javax.swing.JLabel();
         jLabelCerrado3 = new javax.swing.JLabel();
@@ -143,12 +124,30 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jLabelAbierto8 = new javax.swing.JLabel();
         jLabelAbierto9 = new javax.swing.JLabel();
         jLabelAbierto10 = new javax.swing.JLabel();
+        jTextFieldIngresarTanque = new javax.swing.JTextField();
+        jButtonBuscarTanque = new javax.swing.JButton();
         jButtonSalirValvulas = new javax.swing.JButton();
         jFrameTanques = new javax.swing.JFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaTanques = new javax.swing.JTextArea();
         jLabel27 = new javax.swing.JLabel();
         jButtonSalirTanques = new javax.swing.JButton();
+        jFrameAbrir = new javax.swing.JFrame();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jComboBoxNumeroValvula1 = new javax.swing.JComboBox<>();
+        jLabel29 = new javax.swing.JLabel();
+        jTextFieldFechaAbrir = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jButtonAbrirValvula = new javax.swing.JButton();
+        jFrameCerrar = new javax.swing.JFrame();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel31 = new javax.swing.JLabel();
+        jComboBoxNumeroValvula2 = new javax.swing.JComboBox<>();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jTextFieldFechaCerrar = new javax.swing.JTextField();
+        jButtonCerrarValvula = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButtonSalirPrograma = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -178,7 +177,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Dimensiones");
 
-        jComboBoxTipoTanque.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cilindrico", "Ortogonal", "Cubico" }));
+        jComboBoxTipoTanque.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ortogonal", "Cubico", "Cilindrico" }));
         jComboBoxTipoTanque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxTipoTanqueActionPerformed(evt);
@@ -458,13 +457,16 @@ public class GuiPrincipal extends javax.swing.JFrame {
 
         jLabel24.setText("Ingrese el Tanque");
 
-        jComboBoxIDTanque.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel26.setText("Cantidad de agua (m^3)");
 
         jTextFieldMetrosTanque.setEditable(false);
 
         jButtonLlenarTanque.setText("Llenar");
+        jButtonLlenarTanque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLlenarTanqueActionPerformed(evt);
+            }
+        });
 
         jTextFieldMunicipio1.setEditable(false);
 
@@ -486,45 +488,19 @@ public class GuiPrincipal extends javax.swing.JFrame {
 
         jTextFieldMunicipio10.setEditable(false);
 
-        jButtonAbrir1.setText("Abrir");
+        jButtonAbrir.setText("Abrir una valvula");
+        jButtonAbrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirActionPerformed(evt);
+            }
+        });
 
-        jButtonAbrir2.setText("Abrir");
-
-        jButtonAbrir3.setText("Abrir");
-
-        jButtonAbrir4.setText("Abrir");
-
-        jButtonAbrir5.setText("Abrir");
-
-        jButtonAbrir6.setText("Abrir");
-
-        jButtonAbrir7.setText("Abrir");
-
-        jButtonAbrir8.setText("Abrir");
-
-        jButtonAbrir9.setText("Abrir");
-
-        jButtonAbrir10.setText("Abrir");
-
-        jButtonCerrar1.setText("Cerrar");
-
-        jButtonCerrar2.setText("Cerrar");
-
-        jButtonCerrar3.setText("Cerrar");
-
-        jButtonCerrar4.setText("Cerrar");
-
-        jButtonCerrar5.setText("Cerrar");
-
-        jButtonCerrar6.setText("Cerrar");
-
-        jButtonCerrar7.setText("Cerrar");
-
-        jButtonCerrar8.setText("Cerrar");
-
-        jButtonCerrar9.setText("Cerrar");
-
-        jButtonCerrar10.setText("Cerrar");
+        jButtonCerrar.setText("Cerrar una valvula");
+        jButtonCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarActionPerformed(evt);
+            }
+        });
 
         jLabelCerrado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/error.png"))); // NOI18N
 
@@ -566,6 +542,13 @@ public class GuiPrincipal extends javax.swing.JFrame {
 
         jLabelAbierto10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/success.png"))); // NOI18N
 
+        jButtonBuscarTanque.setText("OK");
+        jButtonBuscarTanque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarTanqueActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -577,21 +560,25 @@ public class GuiPrincipal extends javax.swing.JFrame {
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(41, 41, 41)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBoxIDTanque, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jLabel26)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextFieldMetrosTanque, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addComponent(jProgressBarAguaTanque, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButtonLlenarTanque))))
+                                        .addComponent(jButtonLlenarTanque))
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jTextFieldIngresarTanque, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
+                                                .addComponent(jLabel26)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jTextFieldMetrosTanque, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonBuscarTanque))))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(22, 22, 22)
                                 .addComponent(jLabel24)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 58, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addGap(0, 23, Short.MAX_VALUE)
+                        .addGap(0, 27, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabelAbierto1)
@@ -635,69 +622,20 @@ public class GuiPrincipal extends javax.swing.JFrame {
                                 .addComponent(jLabelCerrado10)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jTextFieldMunicipio10, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButtonAbrir10)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonCerrar10))
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jTextFieldMunicipio9, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButtonAbrir9)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonCerrar9))
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jTextFieldMunicipio8, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButtonAbrir8)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonCerrar8))
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jTextFieldMunicipio7, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButtonAbrir7)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonCerrar7))
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jTextFieldMunicipio6, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButtonAbrir6)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonCerrar6))
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jTextFieldMunicipio5, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButtonAbrir5)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonCerrar5))
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jTextFieldMunicipio4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButtonAbrir4)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButtonCerrar4))
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jTextFieldMunicipio1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButtonAbrir1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonCerrar1)))
+                            .addComponent(jTextFieldMunicipio10, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMunicipio9, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMunicipio8, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMunicipio7, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMunicipio6, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMunicipio5, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMunicipio4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMunicipio1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMunicipio2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMunicipio3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextFieldMunicipio2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jButtonAbrir2))
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextFieldMunicipio3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jButtonAbrir3)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButtonCerrar3)
-                                    .addComponent(jButtonCerrar2))))
+                                .addComponent(jButtonAbrir)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonCerrar)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -706,7 +644,9 @@ public class GuiPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel24)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBoxIDTanque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldIngresarTanque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonBuscarTanque))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
@@ -719,83 +659,58 @@ public class GuiPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTextFieldMunicipio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir1)
-                        .addComponent(jButtonCerrar1)
                         .addComponent(jLabelCerrado1))
                     .addComponent(jLabelAbierto1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldMunicipio2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir2)
-                        .addComponent(jButtonCerrar2))
+                    .addComponent(jTextFieldMunicipio2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCerrado2)
                     .addComponent(jLabelAbierto2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldMunicipio3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir3)
-                        .addComponent(jButtonCerrar3))
+                    .addComponent(jTextFieldMunicipio3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCerrado3)
                     .addComponent(jLabelAbierto3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldMunicipio4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir4)
-                        .addComponent(jButtonCerrar4))
+                    .addComponent(jTextFieldMunicipio4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCerrado4)
                     .addComponent(jLabelAbierto4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldMunicipio5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir5)
-                        .addComponent(jButtonCerrar5))
+                    .addComponent(jTextFieldMunicipio5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCerrado5)
                     .addComponent(jLabelAbierto5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldMunicipio6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir6)
-                        .addComponent(jButtonCerrar6))
+                    .addComponent(jTextFieldMunicipio6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCerrado6)
                     .addComponent(jLabelAbierto6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldMunicipio7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir7)
-                        .addComponent(jButtonCerrar7))
+                    .addComponent(jTextFieldMunicipio7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCerrado7)
                     .addComponent(jLabelAbierto7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldMunicipio8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir8)
-                        .addComponent(jButtonCerrar8))
+                    .addComponent(jTextFieldMunicipio8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCerrado8)
                     .addComponent(jLabelAbierto8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldMunicipio9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir9)
-                        .addComponent(jButtonCerrar9))
+                    .addComponent(jTextFieldMunicipio9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCerrado9)
                     .addComponent(jLabelAbierto9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldMunicipio10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButtonAbrir10)
-                        .addComponent(jButtonCerrar10))
+                    .addComponent(jTextFieldMunicipio10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelCerrado10)
                     .addComponent(jLabelAbierto10))
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonAbrir)
+                    .addComponent(jButtonCerrar))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jButtonSalirValvulas.setText("Salir");
@@ -805,12 +720,12 @@ public class GuiPrincipal extends javax.swing.JFrame {
         jFrameValvulasLayout.setHorizontalGroup(
             jFrameValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrameValvulasLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonSalirValvulas)
-                .addGap(24, 24, 24))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrameValvulasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jFrameValvulasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrameValvulasLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButtonSalirValvulas)))
                 .addContainerGap())
         );
         jFrameValvulasLayout.setVerticalGroup(
@@ -846,10 +761,12 @@ public class GuiPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jFrameTanquesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jFrameTanquesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonSalirTanques)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(jFrameTanquesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrameTanquesLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButtonSalirTanques)))
+                .addContainerGap())
         );
         jFrameTanquesLayout.setVerticalGroup(
             jFrameTanquesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -858,8 +775,152 @@ public class GuiPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel27)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonSalirTanques)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel28.setText("Numero de Valvula que desea abrir");
+
+        jComboBoxNumeroValvula1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
+        jLabel29.setText("NOTA: Guiese por el orden de la pestana anterior");
+
+        jTextFieldFechaAbrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldFechaAbrirActionPerformed(evt);
+            }
+        });
+
+        jLabel30.setText("Fecha de apertura");
+
+        jButtonAbrirValvula.setText("Abrir");
+        jButtonAbrirValvula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAbrirValvulaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel28)
+                        .addGap(63, 63, 63)
+                        .addComponent(jComboBoxNumeroValvula1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel29)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel30)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextFieldFechaAbrir, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonAbrirValvula)))
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(jComboBoxNumeroValvula1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel29)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldFechaAbrir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel30)
+                    .addComponent(jButtonAbrirValvula))
+                .addGap(0, 38, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jFrameAbrirLayout = new javax.swing.GroupLayout(jFrameAbrir.getContentPane());
+        jFrameAbrir.getContentPane().setLayout(jFrameAbrirLayout);
+        jFrameAbrirLayout.setHorizontalGroup(
+            jFrameAbrirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameAbrirLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jFrameAbrirLayout.setVerticalGroup(
+            jFrameAbrirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameAbrirLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jLabel31.setText("Numero de Valvula que desea cerrar");
+
+        jComboBoxNumeroValvula2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
+        jLabel32.setText("NOTA: Guiese por el orden de la pestana anterior");
+
+        jLabel33.setText("Fecha de cierre");
+
+        jButtonCerrarValvula.setText("Cerrar");
+        jButtonCerrarValvula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarValvulaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel31)
+                        .addGap(63, 63, 63)
+                        .addComponent(jComboBoxNumeroValvula2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel32)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel33)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextFieldFechaCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonCerrarValvula)))
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(jComboBoxNumeroValvula2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel32)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldFechaCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel33)
+                    .addComponent(jButtonCerrarValvula))
+                .addGap(0, 25, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jFrameCerrarLayout = new javax.swing.GroupLayout(jFrameCerrar.getContentPane());
+        jFrameCerrar.getContentPane().setLayout(jFrameCerrarLayout);
+        jFrameCerrarLayout.setHorizontalGroup(
+            jFrameCerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameCerrarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jFrameCerrarLayout.setVerticalGroup(
+            jFrameCerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameCerrarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1007,6 +1068,11 @@ public class GuiPrincipal extends javax.swing.JFrame {
 
     private void jButtonAgregarTanqueNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarTanqueNuevoActionPerformed
         // TODO add your handling code here:
+        if(jTextFieldIdTanque.getText().equals("") || jTextFieldAltoTanque.getText().equals("") || jTextFieldHabitantesValvula1.getText().equals("") || jTextFieldHabitantesValvula2.getText().equals("") || jTextFieldHabitantesValvula3.getText().equals("") || jTextFieldHabitantesValvula4.getText().equals("") || jTextFieldHabitantesValvula5.getText().equals("") || jTextFieldHabitantesValvula6.getText().equals("") || jTextFieldHabitantesValvula7.getText().equals("") || jTextFieldHabitantesValvula8.getText().equals("") || jTextFieldHabitantesValvula9.getText().equals("") || jTextFieldHabitantesValvula10.getText().equals("") || jTextFieldMunicipioValvula1.getText().equals("") || jTextFieldMunicipioValvula2.getText().equals("") || jTextFieldMunicipioValvula3.getText().equals("") || jTextFieldMunicipioValvula4.getText().equals("") || jTextFieldMunicipioValvula5.getText().equals("") || jTextFieldMunicipioValvula6.getText().equals("") || jTextFieldMunicipioValvula7.getText().equals("") || jTextFieldMunicipioValvula8.getText().equals("") || jTextFieldMunicipioValvula9.getText().equals("") || jTextFieldMunicipioValvula10.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "Uno de los campos esta vacio.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
          String tipoTanqueEscogido=(String) jComboBoxTipoTanque.getSelectedItem();
          String idTanque=jTextFieldIdTanque.getText();
          ArrayList<Integer> habitantes= new ArrayList<>();
@@ -1038,16 +1104,16 @@ public class GuiPrincipal extends javax.swing.JFrame {
                  }   break;
              case "CUBICO":
                  try {
-                     radioTanque=Double.parseDouble(jTextFieldAnchoRadioTanque.getText());
+                     AltoTanque=Double.parseDouble(jTextFieldAltoTanque.getText());
                      if (acueducto.verificarIDTanque(idTanque)==false) {
-                        acueducto.agregarCubico(tipoTanqueEscogido, idTanque, radioTanque, retornarListaMunicipios(), retornarListaHabitantes());
+                        acueducto.agregarCubico(tipoTanqueEscogido, idTanque, AltoTanque, retornarListaMunicipios(), retornarListaHabitantes());
                      JOptionPane.showMessageDialog(null, "Tanque Agregado");
                      }
                      else if (acueducto.verificarIDTanque(idTanque)==true) {
                          JOptionPane.showMessageDialog(null, "El id del tanque ya existe, use otro.");
                      }
                  } catch (NumberFormatException e) {
-                     JOptionPane.showMessageDialog(null, "El valor ingresado en el campo de Ancho/Radio no es un numero.");
+                     JOptionPane.showMessageDialog(null, "El valor ingresado en el campo de Alto no es un numero.");
                      radioTanque=0;
                      LargoTanque=0;
                      AltoTanque=0;
@@ -1061,7 +1127,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
                      LargoTanque=Double.parseDouble(jTextFieldLargoTanque.getText());
                      
                      if (acueducto.verificarIDTanque(idTanque)==false) {
-                        acueducto.agregarCubico(tipoTanqueEscogido, idTanque, radioTanque, retornarListaMunicipios(), retornarListaHabitantes());
+                        acueducto.agregarOrtogonal(tipoTanqueEscogido, idTanque, AltoTanque, radioTanque, LargoTanque, retornarListaMunicipios(), retornarListaHabitantes());
                      JOptionPane.showMessageDialog(null, "Tanque Agregado");
                      }
                      else if (acueducto.verificarIDTanque(idTanque)==true) {
@@ -1078,8 +1144,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
              default:
                  break;
          }
-         
-              System.out.println("Informacion: "+ acueducto.getTanquesAcueducto());
+              System.out.println("Informacion: "+ acueducto.getTanquesAcueducto());}
     }//GEN-LAST:event_jButtonAgregarTanqueNuevoActionPerformed
     public ArrayList<Integer> retornarListaHabitantes(){
         ArrayList<Integer> habitantes= new ArrayList<>();
@@ -1145,22 +1210,31 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private void jComboBoxTipoTanqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoTanqueActionPerformed
         // TODO add your handling code here:
          // TODO add your handling code here:
-         String a=null;
-          a= (String) jComboBoxTipoTanque.getSelectedItem();//recogemos el dato que se seleccionó
+         String a=(String) jComboBoxTipoTanque.getSelectedItem();//recogemos el dato que se seleccionó
           if (a.toUpperCase().equals("CILINDRICO")) {
-              jTextFieldLargoTanque.setEditable(false);
+              jTextFieldLargoTanque.setVisible(false);
+              jLabel9.setVisible(false);
+              jLabel7.setVisible(true);
+              jTextFieldAnchoRadioTanque.setVisible(true);
              jTextFieldAnchoRadioTanque.setEditable(true);
              jTextFieldAltoTanque.setEditable(true);
           }
          else if ((a.toUpperCase().equals("ORTOGONAL"))) {
+             jTextFieldLargoTanque.setVisible(true);
+              jLabel9.setVisible(true);
+              jLabel7.setVisible(true);
+              jTextFieldAnchoRadioTanque.setVisible(true);
               jTextFieldLargoTanque.setEditable(true);
               jTextFieldAnchoRadioTanque.setEditable(true);
               jTextFieldAltoTanque.setEditable(true);
           }
          else if (a.toUpperCase().equals("CUBICO")) {
-             jTextFieldLargoTanque.setEditable(false);
-             jTextFieldAltoTanque.setEditable(false);
-             jTextFieldAnchoRadioTanque.setEditable(true);
+             jTextFieldLargoTanque.setVisible(false);
+              jLabel9.setVisible(false);
+              jLabel7.setVisible(false);
+             jTextFieldLargoTanque.setVisible(false);
+             jTextFieldAltoTanque.setEditable(true);
+             jTextFieldAnchoRadioTanque.setVisible(false);
          }
          borrarCamposTanque();
     }//GEN-LAST:event_jComboBoxTipoTanqueActionPerformed
@@ -1178,6 +1252,183 @@ public class GuiPrincipal extends javax.swing.JFrame {
         
         jFrameTanques.setVisible(false);
     }//GEN-LAST:event_jButtonSalirTanquesActionPerformed
+
+    private void jButtonBuscarTanqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarTanqueActionPerformed
+        // TODO add your handling code here:
+        String tanque=jTextFieldIngresarTanque.getText();
+        System.out.println(acueducto.aguaDisponible(tanque));
+        if(acueducto.verificarIDTanque(tanque)==true)
+        {
+            jTextFieldMetrosTanque.setText(String.valueOf(acueducto.aguaDisponible(tanque)));
+            jProgressBarAguaTanque.setValue((int)acueducto.getPorcentaje(tanque));
+            Valvula[] valvulas=acueducto.getValvulas(tanque);
+            jTextFieldMunicipio1.setText(valvulas[0].getMunicipio());
+                if(valvulas[0].getAbierto()==true)
+                {
+                    jLabelAbierto1.setVisible(true);
+                    jLabelCerrado1.setVisible(false);
+                }
+                else if(valvulas[0].getAbierto()==false)
+                {
+                    jLabelAbierto1.setVisible(false);
+                    jLabelCerrado1.setVisible(true);
+                }
+            jTextFieldMunicipio2.setText(valvulas[1].getMunicipio());
+                if(valvulas[1].getAbierto()==true)
+                {
+                    jLabelAbierto2.setVisible(true);
+                    jLabelCerrado2.setVisible(false);
+                }
+                else if(valvulas[1].getAbierto()==false)
+                {
+                    jLabelAbierto2.setVisible(false);
+                    jLabelCerrado2.setVisible(true);
+                }
+            jTextFieldMunicipio3.setText(valvulas[2].getMunicipio());
+                if(valvulas[2].getAbierto()==true)
+                {
+                    jLabelAbierto3.setVisible(true);
+                    jLabelCerrado3.setVisible(false);
+                }
+                else if(valvulas[2].getAbierto()==false)
+                {
+                    jLabelAbierto3.setVisible(false);
+                    jLabelCerrado3.setVisible(true);
+                }
+            jTextFieldMunicipio4.setText(valvulas[3].getMunicipio());
+                if(valvulas[3].getAbierto()==true)
+                {
+                    jLabelAbierto4.setVisible(true);
+                    jLabelCerrado4.setVisible(false);
+                }
+                else if(valvulas[3].getAbierto()==false)
+                {
+                    jLabelAbierto4.setVisible(false);
+                    jLabelCerrado4.setVisible(true);
+                }
+            jTextFieldMunicipio5.setText(valvulas[4].getMunicipio());
+                if(valvulas[4].getAbierto()==true)
+                {
+                    jLabelAbierto5.setVisible(true);
+                    jLabelCerrado5.setVisible(false);
+                }
+                else if(valvulas[4].getAbierto()==false)
+                {
+                    jLabelAbierto5.setVisible(false);
+                    jLabelCerrado5.setVisible(true);
+                }
+            jTextFieldMunicipio6.setText(valvulas[5].getMunicipio());
+                if(valvulas[5].getAbierto()==true)
+                {
+                    jLabelAbierto6.setVisible(true);
+                    jLabelCerrado6.setVisible(false);
+                }
+                else if(valvulas[5].getAbierto()==false)
+                {
+                    jLabelAbierto6.setVisible(false);
+                    jLabelCerrado6.setVisible(true);
+                }
+            jTextFieldMunicipio7.setText(valvulas[6].getMunicipio());
+                if(valvulas[6].getAbierto()==true)
+                {
+                    jLabelAbierto7.setVisible(true);
+                    jLabelCerrado7.setVisible(false);
+                }
+                else if(valvulas[6].getAbierto()==false)
+                {
+                    jLabelAbierto7.setVisible(false);
+                    jLabelCerrado7.setVisible(true);
+                }
+            jTextFieldMunicipio8.setText(valvulas[7].getMunicipio());
+                if(valvulas[7].getAbierto()==true)
+                {
+                    jLabelAbierto8.setVisible(true);
+                    jLabelCerrado8.setVisible(false);
+                }
+                else if(valvulas[7].getAbierto()==false)
+                {
+                    jLabelAbierto8.setVisible(false);
+                    jLabelCerrado8.setVisible(true);
+                }
+            jTextFieldMunicipio9.setText(valvulas[8].getMunicipio());
+                if(valvulas[8].getAbierto()==true)
+                {
+                    jLabelAbierto9.setVisible(true);
+                    jLabelCerrado9.setVisible(false);
+                }
+                else if(valvulas[8].getAbierto()==false)
+                {
+                    jLabelAbierto9.setVisible(false);
+                    jLabelCerrado9.setVisible(true);
+                }
+            jTextFieldMunicipio10.setText(valvulas[9].getMunicipio());
+                if(valvulas[9].getAbierto()==true)
+                {
+                    jLabelAbierto10.setVisible(true);
+                    jLabelCerrado10.setVisible(false);
+                }
+                else if(valvulas[9].getAbierto()==false)
+                {
+                    jLabelAbierto10.setVisible(false);
+                    jLabelCerrado10.setVisible(true);
+                }
+        }
+        else if(acueducto.verificarIDTanque(tanque)==false)
+        {
+            JOptionPane.showMessageDialog(null, "Este ID no existe.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButtonBuscarTanqueActionPerformed
+
+    private void jButtonLlenarTanqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLlenarTanqueActionPerformed
+        // TODO add your handling code here:
+        String tanque=jTextFieldIngresarTanque.getText();
+        acueducto.llenarTanque(tanque);
+        jTextFieldMetrosTanque.setText(String.valueOf(acueducto.aguaDisponible(tanque)));
+        jProgressBarAguaTanque.setValue((int)acueducto.getPorcentaje(tanque));
+    }//GEN-LAST:event_jButtonLlenarTanqueActionPerformed
+
+    private void jButtonAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirActionPerformed
+        // TODO add your handling code here:
+        jFrameAbrir.pack();
+        jFrameAbrir.setVisible(true);
+        jTextFieldFechaAbrir.setText("");
+    }//GEN-LAST:event_jButtonAbrirActionPerformed
+
+    private void jTextFieldFechaAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFechaAbrirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFechaAbrirActionPerformed
+
+    private void jButtonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarActionPerformed
+        // TODO add your handling code here:
+        jFrameCerrar.pack();
+        jFrameCerrar.setVisible(true);
+        jTextFieldFechaCerrar.setText("");
+    }//GEN-LAST:event_jButtonCerrarActionPerformed
+
+    private void jButtonAbrirValvulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrirValvulaActionPerformed
+        // TODO add your handling code here:
+        String id=jTextFieldIngresarTanque.getText();
+        try{
+            porcentajeBajo.porcentajeBajo(acueducto.getPorcentaje(id));
+            int numvalve=(int)jComboBoxNumeroValvula1.getSelectedItem();
+            String fecha=jTextFieldFechaAbrir.getText();
+            acueducto.abrirValvula(id,numvalve-1,fecha);
+            JOptionPane.showMessageDialog(null,"Valvula Abierta. Actualize la pestana anterior.");
+        }
+        catch(NivelBajoException e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Alerta", JOptionPane.ERROR_MESSAGE);
+        }  
+    }//GEN-LAST:event_jButtonAbrirValvulaActionPerformed
+
+    private void jButtonCerrarValvulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarValvulaActionPerformed
+        // TODO add your handling code here:
+        String id=jTextFieldIngresarTanque.getText();
+        int numvalve=(int)jComboBoxNumeroValvula2.getSelectedItem();
+        String fecha=jTextFieldFechaCerrar.getText();
+        acueducto.abrirValvula(id,numvalve-1,fecha);
+        JOptionPane.showMessageDialog(null,"Valvula Cerrada. Actualize la pestana anterior.");
+    }//GEN-LAST:event_jButtonCerrarValvulaActionPerformed
 
     public void llenarInformacionTanques(){
        jTextAreaTanques.setText("");
@@ -1230,29 +1481,14 @@ public class GuiPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAbrir1;
-    private javax.swing.JButton jButtonAbrir10;
-    private javax.swing.JButton jButtonAbrir2;
-    private javax.swing.JButton jButtonAbrir3;
-    private javax.swing.JButton jButtonAbrir4;
-    private javax.swing.JButton jButtonAbrir5;
-    private javax.swing.JButton jButtonAbrir6;
-    private javax.swing.JButton jButtonAbrir7;
-    private javax.swing.JButton jButtonAbrir8;
-    private javax.swing.JButton jButtonAbrir9;
+    private javax.swing.JButton jButtonAbrir;
+    private javax.swing.JButton jButtonAbrirValvula;
     private javax.swing.JButton jButtonAgregarTanque;
     private javax.swing.JButton jButtonAgregarTanqueNuevo;
     private javax.swing.JButton jButtonAguaDisponibleRegion;
-    private javax.swing.JButton jButtonCerrar1;
-    private javax.swing.JButton jButtonCerrar10;
-    private javax.swing.JButton jButtonCerrar2;
-    private javax.swing.JButton jButtonCerrar3;
-    private javax.swing.JButton jButtonCerrar4;
-    private javax.swing.JButton jButtonCerrar5;
-    private javax.swing.JButton jButtonCerrar6;
-    private javax.swing.JButton jButtonCerrar7;
-    private javax.swing.JButton jButtonCerrar8;
-    private javax.swing.JButton jButtonCerrar9;
+    private javax.swing.JButton jButtonBuscarTanque;
+    private javax.swing.JButton jButtonCerrar;
+    private javax.swing.JButton jButtonCerrarValvula;
     private javax.swing.JButton jButtonLlenarTanque;
     private javax.swing.JButton jButtonSalirPrograma;
     private javax.swing.JButton jButtonSalirTanques;
@@ -1260,8 +1496,11 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonValvulasAbiertasCilindricos;
     private javax.swing.JButton jButtonVerTanquesRegistrados;
     private javax.swing.JButton jButtonVerValvulas;
-    private javax.swing.JComboBox<String> jComboBoxIDTanque;
+    private javax.swing.JComboBox<String> jComboBoxNumeroValvula1;
+    private javax.swing.JComboBox<String> jComboBoxNumeroValvula2;
     private javax.swing.JComboBox<String> jComboBoxTipoTanque;
+    private javax.swing.JFrame jFrameAbrir;
+    private javax.swing.JFrame jFrameCerrar;
     private javax.swing.JFrame jFrameNuevoTanque;
     private javax.swing.JFrame jFrameTanques;
     private javax.swing.JFrame jFrameValvulas;
@@ -1285,7 +1524,13 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1316,11 +1561,15 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JProgressBar jProgressBarAguaTanque;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextAreaTanques;
     private javax.swing.JTextField jTextFieldAltoTanque;
     private javax.swing.JTextField jTextFieldAnchoRadioTanque;
+    private javax.swing.JTextField jTextFieldFechaAbrir;
+    private javax.swing.JTextField jTextFieldFechaCerrar;
     private javax.swing.JTextField jTextFieldHabitantesValvula1;
     private javax.swing.JTextField jTextFieldHabitantesValvula10;
     private javax.swing.JTextField jTextFieldHabitantesValvula2;
@@ -1332,6 +1581,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldHabitantesValvula8;
     private javax.swing.JTextField jTextFieldHabitantesValvula9;
     private javax.swing.JTextField jTextFieldIdTanque;
+    private javax.swing.JTextField jTextFieldIngresarTanque;
     private javax.swing.JTextField jTextFieldLargoTanque;
     private javax.swing.JTextField jTextFieldMetrosTanque;
     private javax.swing.JTextField jTextFieldMunicipio1;
