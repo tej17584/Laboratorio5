@@ -17,7 +17,7 @@ public class hayAguaInsuficiente {
      * constructor
      * @param cantARestar cantidad de agua a restar
      * @param cantAgua cantidad de agua en el tanque
-     * @throws AguaInsuficienteException 
+     * @throws AguaInsuficienteException Lanza la excepcion
      */
     public static void hayAguaInsuficiente(double cantARestar, double cantAgua) throws AguaInsuficienteException
     {
